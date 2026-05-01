@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>[Piece title] - Splendid Engines</title>
+  <meta name="description" content="[One-sentence summary of the piece.]" />
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/assets/css/custom.css" />
+
+  <!--
+    OPEN GRAPH (set these for each piece so it looks right when shared)
+  -->
+  <meta property="og:title" content="[Piece title]" />
+  <meta property="og:description" content="[One-sentence summary of the piece.]" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://splendidengines.com/writing/[slug]/" />
+  <!-- <meta property="og:image" content="https://splendidengines.com/assets/img/[social-card].jpg" /> -->
+</head>
+<body>
+
+<!--
+  HOW TO USE THIS TEMPLATE
+  ------------------------
+  1. Copy this whole folder to writing/[your-slug]/
+  2. Replace [Piece title], [One-sentence summary], [slug], and the
+     date below with real values
+  3. Replace the body content under <main> with the piece itself
+  4. Add an entry to writing/index.html linking to /writing/[your-slug]/
+  5. If the piece warrants something bespoke (custom typography,
+     embedded media, interactive bits), add it. This is a starting
+     point, not a straitjacket.
+-->
+
+<!-- HEADER (canonical: _includes/header.html) -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="/">Splendid Engines</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="/case-study/">Case study</a></li>
+        <li class="nav-item active"><a class="nav-link" href="/writing/">Writing</a></li>
+        <li class="nav-item"><a class="nav-link" href="/contact/">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <article class="container py-5" style="max-width: 680px;">
+    <header class="mb-5">
+      <h1 class="display-5 fw-bold">[Piece title]</h1>
+      <div class="text-muted">[YYYY-MM-DD]</div>
+    </header>
+
+    <p class="lead">[Opening paragraph.]</p>
+
+    <p>[Body paragraph.]</p>
+
+    <h2 class="mt-5">[Section heading]</h2>
+
+    <p>[More body.]</p>
+  </article>
+</main>
+
+<!-- FOOTER (canonical: _includes/footer.html) -->
+<footer class="border-top py-4 mt-5">
+  <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+    <div class="text-muted small">&copy; <span id="footer-year">2026</span> Splendid Engines</div>
+    <div class="small">
+      <a href="/contact/" class="text-decoration-none me-3">Contact</a>
+      <a href="/writing/" class="text-decoration-none">Writing</a>
+    </div>
+  </div>
+</footer>
+<script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+
+<script src="/assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

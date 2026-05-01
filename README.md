@@ -1,0 +1,63 @@
+# Splendid Engines website
+
+Static site for [splendidengines.com](https://splendidengines.com). Hosted on Cloudflare Pages, auto-deployed from `main`.
+
+## Stack
+
+- HTML + Bootstrap 5 (loaded locally, not from CDN)
+- Vanilla JavaScript where needed
+- No build step. No CMS. No static site generator.
+- Plausible for analytics
+- Calendly for booking (added in Phase 2)
+
+## Editing the site
+
+Every change happens by talking to Claude Code. You ask, Claude edits, commits, and pushes. Cloudflare Pages picks up the push and the change is live in under a minute.
+
+## Repo layout
+
+```
+/
+├── index.html                 # homepage
+├── contact/index.html
+├── case-study/index.html
+├── writing/
+│   ├── index.html             # list of all pieces
+│   ├── _template/index.html   # reference template for new pieces
+│   └── [slug]/index.html      # each piece, hand-built
+├── assets/
+│   ├── css/                   # bootstrap.min.css + custom.css
+│   ├── js/                    # bootstrap.bundle.min.js
+│   └── img/
+└── _includes/
+    ├── header.html            # canonical header
+    └── footer.html            # canonical footer
+```
+
+## Header and footer
+
+There is no build step, so the header and footer are duplicated into every page. The canonical versions live in `_includes/`. When changing them, update every page that uses them. The list of pages is in the comment at the top of each include.
+
+This is a deliberate tradeoff: a tiny bit of duplication maintenance in exchange for zero build complexity.
+
+## Adding a writing piece
+
+1. Copy `writing/_template/` to `writing/[your-slug]/`
+2. Fill in the title, date, summary, and body
+3. Add a link to it in `writing/index.html`
+
+Each piece can have its own bespoke layout, typography, or embedded media. The template is a starting point, not a straitjacket. For quick text-only pieces, the template is enough as-is.
+
+## Local preview
+
+There is no build step, so any static file server works. From the project root:
+
+```
+python3 -m http.server 8000
+```
+
+Then open `http://localhost:8000`. Opening the HTML files directly with `file://` mostly works, but absolute paths like `/assets/...` will not resolve, so use a local server.
+
+## Deploying
+
+Pushing to `main` deploys automatically via Cloudflare Pages. There is no manual deploy step.

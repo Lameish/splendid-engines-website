@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Case study - Splendid Engines</title>
+  <meta name="description" content="A Splendid Engines case study." />
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/assets/css/custom.css" />
+</head>
+<body>
+
+<!-- HEADER (canonical: _includes/header.html) -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="/">Splendid Engines</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item active"><a class="nav-link" href="/case-study/">Case study</a></li>
+        <li class="nav-item"><a class="nav-link" href="/writing/">Writing</a></li>
+        <li class="nav-item"><a class="nav-link" href="/contact/">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <section class="container py-5">
+    <h1 class="display-5 fw-bold">Case study</h1>
+    <p class="lead text-muted">Phase 1 placeholder. Real case study content lands in Phase 3.</p>
+  </section>
+</main>
+
+<!-- FOOTER (canonical: _includes/footer.html) -->
+<footer class="border-top py-4 mt-5">
+  <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+    <div class="text-muted small">&copy; <span id="footer-year">2026</span> Splendid Engines</div>
+    <div class="small">
+      <a href="/contact/" class="text-decoration-none me-3">Contact</a>
+      <a href="/writing/" class="text-decoration-none">Writing</a>
+    </div>
+  </div>
+</footer>
+<script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+
+<script src="/assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

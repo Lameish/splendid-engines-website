@@ -1,0 +1,9 @@
+/*
+  Site-specific styles. Bootstrap 5 handles the heavy lifting; only
+  add overrides and custom touches here. Keep it small on purpose.
+*/
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

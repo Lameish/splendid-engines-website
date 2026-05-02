@@ -6,6 +6,9 @@
   <title>About - Splendid Engines</title>
   <meta name="description" content="About Splendid Engines." />
   <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/custom.css" />
 </head>
 <body>
@@ -23,25 +26,43 @@
         <li class="nav-item active"><a class="nav-link" href="/about/">About</a></li>
         <li class="nav-item"><a class="nav-link" href="/writing/">Writing</a></li>
         <li class="nav-item"><a class="nav-link" href="/contact/">Contact</a></li>
+        <li class="nav-item ms-lg-3"><a class="btn btn-se-primary btn-sm" href="https://meetings.hubspot.com/ef-p" target="_blank" rel="noopener">Book a call</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
 <main>
-  <section class="container py-5">
-    <h1 class="display-5 fw-bold">About</h1>
-    <p class="lead text-muted">Phase 1 placeholder. Real content lands in Phase 3.</p>
+  <section class="section">
+    <div class="container container-narrow">
+      <h1 class="display-5 fw-bold mb-3">About</h1>
+      <p class="lead text-se-muted">Phase 1 placeholder. Real content lands in Phase 3.</p>
+    </div>
   </section>
 </main>
 
 <!-- FOOTER (canonical: _includes/footer.html) -->
-<footer class="border-top py-4 mt-5">
-  <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
-    <div class="text-muted small">&copy; <span id="footer-year">2026</span> Splendid Engines</div>
-    <div class="small">
-      <a href="/contact/" class="text-decoration-none me-3">Contact</a>
-      <a href="/writing/" class="text-decoration-none">Writing</a>
+<footer class="site-footer py-5">
+  <div class="container">
+    <div class="row align-items-center g-4">
+      <div class="col-md-4 text-center text-md-start">
+        <img src="/assets/img/logo-splendid.png" alt="Splendid Engines" class="footer-logo mb-3" />
+        <div>
+          <img src="/assets/img/tagline-niceday.png" alt="Nice day, isn't it?" class="footer-tagline" />
+        </div>
+      </div>
+      <div class="col-md-4 text-center">
+        <ul class="list-inline mb-0 small">
+          <li class="list-inline-item me-3"><a href="/">Home</a></li>
+          <li class="list-inline-item me-3"><a href="/about/">About</a></li>
+          <li class="list-inline-item me-3"><a href="/case-study/">Case study</a></li>
+          <li class="list-inline-item me-3"><a href="/writing/">Writing</a></li>
+          <li class="list-inline-item"><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 text-center text-md-end small">
+        &copy; <span id="footer-year">2026</span> Splendid Engines. Proudly operating in Canada and the USA.
+      </div>
     </div>
   </div>
 </footer>

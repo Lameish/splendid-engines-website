@@ -1,9 +1,231 @@
 /*
-  Site-specific styles. Bootstrap 5 handles the heavy lifting; only
-  add overrides and custom touches here. Keep it small on purpose.
+  Splendid Engines custom styles.
+  Bootstrap 5 handles layout primitives; this file holds:
+    - Brand color palette
+    - Typography
+    - Custom button treatment
+    - Section spacing / dark variants
+    - A handful of small components (stat blocks, logo strip)
 */
 
+:root {
+  --se-red:        #db4937;   /* primary CTA, accents */
+  --se-red-dark:   #6d2422;   /* hover, deeper accent */
+  --se-yellow:     #fcf74e;   /* highlight */
+  --se-dark:       #3f4a54;   /* dark sections background */
+  --se-ink:        #1d2429;   /* body text on light bg */
+  --se-muted:      #5a6470;
+  --se-cream:      #f7f4ee;   /* warm off-white section bg */
+  --se-line:       #e6e6e6;
+}
+
+html { scroll-behavior: smooth; }
+
 body {
+  font-family: 'Manrope', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  color: var(--se-ink);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+}
+
+h1, h2, h3, h4, h5, h6,
+.display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: var(--se-ink);
+}
+
+a { color: var(--se-red); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a:hover { color: var(--se-red-dark); }
+
+/* ---------- Navbar ---------- */
+.navbar { padding-top: 1rem; padding-bottom: 1rem; }
+.navbar-brand { font-weight: 800; letter-spacing: -0.01em; }
+.navbar .nav-link { font-weight: 600; color: var(--se-ink); }
+.navbar .nav-link:hover { color: var(--se-red); }
+
+/* ---------- Buttons ---------- */
+.btn-se-primary {
+  background-color: var(--se-red);
+  border: 2px solid var(--se-red);
+  color: #fff;
+  font-weight: 700;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  transition: background-color .15s ease, border-color .15s ease, transform .15s ease;
+}
+.btn-se-primary:hover,
+.btn-se-primary:focus {
+  background-color: var(--se-red-dark);
+  border-color: var(--se-red-dark);
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn-se-outline {
+  background-color: transparent;
+  border: 2px solid currentColor;
+  color: var(--se-ink);
+  font-weight: 700;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+}
+.btn-se-outline:hover { background-color: var(--se-ink); color: #fff; text-decoration: none; }
+
+.bg-se-dark .btn-se-outline { color: #fff; }
+.bg-se-dark .btn-se-outline:hover { background-color: #fff; color: var(--se-ink); }
+
+/* ---------- Sections ---------- */
+.section { padding: 4.5rem 0; }
+.section-sm { padding: 3rem 0; }
+.section-lg { padding: 6rem 0; }
+
+.bg-se-cream { background-color: var(--se-cream); }
+.bg-se-dark  { background-color: var(--se-dark); color: #fff; }
+.bg-se-dark h1, .bg-se-dark h2, .bg-se-dark h3,
+.bg-se-dark h4, .bg-se-dark h5, .bg-se-dark h6 { color: #fff; }
+.bg-se-red   { background-color: var(--se-red); color: #fff; }
+.bg-se-red h1, .bg-se-red h2, .bg-se-red h3,
+.bg-se-red h4, .bg-se-red h5, .bg-se-red h6 { color: #fff; }
+
+/* ---------- Hero ---------- */
+.hero-headline {
+  font-size: clamp(2.25rem, 4.5vw, 3.75rem);
+  margin-bottom: 1rem;
+}
+.hero-sub {
+  font-size: clamp(1.1rem, 1.5vw, 1.35rem);
+  color: var(--se-muted);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+.hero-img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* yellow underline highlight under inline text */
+.se-highlight {
+  background: linear-gradient(transparent 60%, var(--se-yellow) 60%);
+  padding: 0 0.1em;
+}
+
+/* ---------- Logo strip ---------- */
+.logo-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem 3rem;
+  align-items: center;
+  justify-content: center;
+}
+.logo-strip img {
+  max-height: 40px;
+  width: auto;
+  filter: grayscale(100%);
+  opacity: 0.8;
+  transition: opacity .15s ease, filter .15s ease;
+}
+.logo-strip img:hover { filter: grayscale(0); opacity: 1; }
+
+/* ---------- Three pillars ---------- */
+.pillar {
+  text-align: center;
+  padding: 1.5rem;
+}
+.pillar img {
+  max-width: 160px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+.pillar h3 { font-size: 1.5rem; }
+
+/* ---------- Stats ---------- */
+.stat {
+  text-align: center;
+  padding: 1rem 0.5rem;
+}
+.stat .stat-number {
+  font-size: clamp(2.5rem, 5vw, 3.75rem);
+  font-weight: 800;
+  line-height: 1;
+  color: var(--se-yellow);
+  letter-spacing: -0.02em;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.stat .stat-label {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.35;
+}
+
+/* ---------- Eligibility (who we help) ---------- */
+.criterion {
+  text-align: center;
+  padding: 1.5rem;
+}
+.criterion img {
+  max-width: 110px;
+  height: auto;
+  margin-bottom: 1.25rem;
+}
+.criterion h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
+.criterion p { color: var(--se-muted); }
+
+/* ---------- Testimonial ---------- */
+.testimonial-quote {
+  font-size: clamp(1.25rem, 2vw, 1.625rem);
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--se-ink);
+  margin-bottom: 1.5rem;
+}
+.testimonial-quote::before {
+  content: "\201C";
+  display: block;
+  font-size: 4rem;
+  line-height: 0.5;
+  color: var(--se-red);
+  margin-bottom: 1rem;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+.testimonial-attr img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 0.875rem;
+}
+.testimonial-attr-name { font-weight: 700; color: var(--se-ink); }
+.testimonial-attr-role { color: var(--se-muted); font-size: 0.95rem; }
+
+/* ---------- Footer ---------- */
+.site-footer { background-color: var(--se-dark); color: rgba(255,255,255,0.8); }
+.site-footer a { color: rgba(255,255,255,0.85); text-decoration: none; }
+.site-footer a:hover { color: var(--se-yellow); }
+.site-footer .footer-logo { max-height: 64px; width: auto; }
+.site-footer .footer-tagline { max-height: 48px; width: auto; }
+
+/* ---------- Utility ---------- */
+.text-se-red { color: var(--se-red) !important; }
+.text-se-yellow { color: var(--se-yellow) !important; }
+.text-se-muted { color: var(--se-muted) !important; }
+
+/* Slightly tighter container on text-heavy sections */
+.container-narrow {
+  max-width: 880px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Reduce default Bootstrap card-like overuse in mobile */
+@media (max-width: 767.98px) {
+  .section { padding: 3rem 0; }
+  .section-lg { padding: 4rem 0; }
+  .hero-headline { font-size: 2.25rem; }
+  .stat { padding: 0.5rem 0.25rem; }
 }

@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/custom.css" />
 </head>
 <body>
@@ -36,24 +36,40 @@
 </nav>
 
 <main>
-  <section class="section">
-    <div class="container container-narrow">
-      <h1 class="display-5 fw-bold mb-4">Writing</h1>
-      <p class="text-se-muted mb-5">Each piece is its own thing. No post treadmill, no SEO listicles.</p>
 
-      <ul class="list-unstyled">
+  <!-- HERO -->
+  <section class="hero text-center">
+    <div class="container container-narrow">
+      <span class="section-label">Writing</span>
+      <h1 class="hero-headline mt-2">
+        Considered <span class="se-highlight">essays</span>, not posts.
+      </h1>
+      <p class="hero-body">
+        No post treadmill. No SEO listicles. Each piece is its own thing, written when there's something worth writing about.
+      </p>
+    </div>
+  </section>
+
+  <!-- ESSAY LIST -->
+  <section class="pb-5">
+    <div class="container container-narrow">
+      <ul class="list-unstyled mb-0">
         <!--
           To add a new piece: create writing/[slug]/index.html (copy
           writing/_template/ as a starting point) and add a line here:
 
-          <li class="mb-3">
-            <a href="/writing/[slug]/" class="fs-5 text-decoration-none">[Title]</a>
-            <div class="text-se-muted small">[YYYY-MM-DD]</div>
+          <li class="py-4 border-top">
+            <a href="/writing/[slug]/" class="fs-4 text-decoration-none fw-bold d-block mb-1">[Title]</a>
+            <div class="text-se-muted small">[Month DD, YYYY]</div>
           </li>
         -->
+        <li class="py-5 border-top text-center">
+          <p class="text-se-muted mb-0">No pieces published yet. Check back soon.</p>
+        </li>
       </ul>
     </div>
   </section>
+
 </main>
 
 <!-- FOOTER (canonical: _includes/footer.html) -->

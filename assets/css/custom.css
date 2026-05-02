@@ -284,6 +284,39 @@ hr.section-divider {
   margin-right: auto;
 }
 
+/* ---------- Path cards (homepage two-paths fork) ---------- */
+.path-card {
+  display: block;
+  height: 100%;
+  background: #fff;
+  border: 1px solid var(--se-line);
+  border-radius: 8px;
+  padding: 2rem;
+  text-decoration: none;
+  color: var(--se-ink);
+  transition: border-color .15s ease, transform .15s ease, box-shadow .15s ease;
+}
+.path-card:hover {
+  border-color: var(--se-red);
+  color: var(--se-ink);
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
+}
+.path-card h2,
+.path-card h3 {
+  color: var(--se-ink);
+}
+.path-card-cta {
+  display: inline-block;
+  font-weight: 700;
+  color: var(--se-red);
+  letter-spacing: 0.02em;
+}
+.path-card:hover .path-card-cta {
+  color: var(--se-red-dark);
+}
+
 /* Reduce default Bootstrap card-like overuse in mobile */
 @media (max-width: 767.98px) {
   .section { padding: 3rem 0; }

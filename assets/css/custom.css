@@ -95,22 +95,21 @@ a:hover { color: var(--se-red-dark); }
 
 /* ---------- Hero ---------- */
 .hero {
-  padding: 3.5rem 0 2.5rem;
+  padding: 4.5rem 0 3.5rem;
 }
 .hero-headline {
   font-size: clamp(2.25rem, 4vw, 3.5rem);
-  margin-bottom: 1rem;
-}
-.hero-sub {
-  font-size: clamp(1.1rem, 1.4vw, 1.25rem);
-  color: var(--se-muted);
-  margin-bottom: 1rem;
-  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 1.75rem;
 }
 .hero-body {
-  font-size: 1.0625rem;
+  font-size: 1.125rem;
+  line-height: 1.7;
   color: var(--se-ink);
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .hero-cta {
   display: flex;
@@ -119,8 +118,9 @@ a:hover { color: var(--se-red-dark); }
   justify-content: center;
 }
 @media (max-width: 575.98px) {
-  .hero { padding: 2rem 0 1.5rem; }
-  .hero-headline { font-size: 2rem; }
+  .hero { padding: 2.5rem 0 2rem; }
+  .hero-headline { font-size: 2rem; line-height: 1.15; margin-bottom: 1.25rem; }
+  .hero-body { margin-bottom: 1.5rem; }
 }
 
 /* yellow underline highlight under inline text */

@@ -19,8 +19,9 @@ Every change happens by talking to Claude Code. You ask, Claude edits, commits, 
 ```
 /
 ├── index.html                 # homepage
-├── contact/index.html
+├── about/index.html
 ├── case-study/index.html
+├── contact/index.html
 ├── writing/
 │   ├── index.html             # list of all pieces
 │   ├── _template/index.html   # reference template for new pieces

@@ -118,15 +118,16 @@ a:hover { color: var(--se-red-dark); }
 .logo-strip {
   display: flex;
   flex-wrap: wrap;
-  gap: 2.5rem 3rem;
+  gap: 1.5rem 2.5rem;
   align-items: center;
   justify-content: center;
 }
 .logo-strip img {
-  max-height: 40px;
-  width: auto;
+  width: 130px;
+  height: 44px;
+  object-fit: contain;
   filter: grayscale(100%);
-  opacity: 0.8;
+  opacity: 0.75;
   transition: opacity .15s ease, filter .15s ease;
 }
 .logo-strip img:hover { filter: grayscale(0); opacity: 1; }

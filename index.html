@@ -12,6 +12,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://splendidengines.com/" />
 
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon-splendid.svg" />
   <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +24,10 @@
 <!-- HEADER (canonical: _includes/header.html) -->
 <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
   <div class="container">
-    <a class="navbar-brand fw-bold" href="/">Splendid Engines</a>
+    <a class="navbar-brand" href="/">
+      <img src="/assets/img/favicon-splendid.svg" alt="" />
+      <span>Splendid Engines</span>
+    </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -42,43 +46,26 @@
 <main>
 
   <!-- HERO -->
-  <section class="section section-lg">
-    <div class="container">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-6">
-          <h1 class="hero-headline">
-            Relationship-driven <span class="se-highlight">GTM</span> for B2B revenue leaders.
-          </h1>
-          <p class="hero-sub">Your buyers trust each other. Not you. Yet.</p>
-          <p class="mb-4">
-            Deals are revenue. Leads are just noise. Stop wasting budget on vanity metrics. Fill your funnel from the bottom up with B2B community marketing.
-          </p>
-          <p class="mb-4">
-            Turn your professional network into a growth engine. Co-create the content buyers actually care about, make powerful connections, and start conversations with the people who matter.
-          </p>
-          <a href="https://meetings.hubspot.com/ef-p" target="_blank" rel="noopener" class="btn btn-se-primary">Get started</a>
-        </div>
-        <div class="col-lg-6 text-center">
-          <img src="/assets/img/hero-community.jpg" alt="Illustration of a connected B2B buyer community" class="hero-img" loading="eager" />
-        </div>
+  <section class="hero text-center">
+    <div class="container container-narrow">
+      <h1 class="hero-headline">
+        Relationship-driven <span class="se-highlight">GTM</span> for B2B revenue leaders.
+      </h1>
+      <p class="hero-sub">Your buyers trust each other. Not you. Yet.</p>
+      <p class="hero-body">
+        Stop wasting budget on vanity metrics. Turn your professional network into a growth engine and start conversations with the people who matter.
+      </p>
+      <div class="hero-cta">
+        <a href="https://meetings.hubspot.com/ef-p" target="_blank" rel="noopener" class="btn btn-se-primary">Get started</a>
+        <a href="#how-it-works" class="btn btn-se-outline">Learn more</a>
       </div>
     </div>
   </section>
 
-  <!-- TRUST BAND -->
-  <section class="section-sm bg-se-cream">
-    <div class="container container-narrow text-center">
-      <p class="lead mb-4">
-        In B2B, trust matters now more than ever. Our relationship-driven GTM engine lets revenue leaders build human relationships with decision-makers at target accounts, and turn those relationships into pipeline.
-      </p>
-      <a href="https://meetings.hubspot.com/ef-p" target="_blank" rel="noopener" class="btn btn-se-outline">Book a call</a>
-    </div>
-  </section>
-
-  <!-- LOGO STRIP -->
-  <section class="section">
+  <!-- LOGO STRIP (above the fold) -->
+  <section class="pb-5 pt-2">
     <div class="container">
-      <p class="text-center text-se-muted mb-4 fw-semibold">We've put our clients in the room with...</p>
+      <p class="text-center text-se-muted mb-4 small fw-semibold text-uppercase" style="letter-spacing: 0.12em;">We've put our clients in the room with</p>
       <div class="logo-strip">
         <img src="/assets/img/logo-paypal.png" alt="PayPal" loading="lazy" />
         <img src="/assets/img/logo-spotify.png" alt="Spotify" loading="lazy" />
@@ -90,25 +77,35 @@
     </div>
   </section>
 
+  <!-- TRUST BAND -->
+  <section class="section-sm bg-se-cream" id="how-it-works">
+    <div class="container container-narrow text-center">
+      <p class="lead mb-4">
+        In B2B, trust matters now more than ever. Our relationship-driven GTM engine lets revenue leaders build human relationships with decision-makers at target accounts, and turn those relationships into pipeline.
+      </p>
+      <a href="https://meetings.hubspot.com/ef-p" target="_blank" rel="noopener" class="btn btn-se-outline">Book a call</a>
+    </div>
+  </section>
+
   <!-- THREE PILLARS -->
-  <section class="section bg-se-cream">
+  <section class="section">
     <div class="container">
       <div class="row g-4">
         <div class="col-md-4">
           <div class="pillar">
-            <img src="/assets/img/bees-1.png" alt="" loading="lazy" />
+            <span class="pillar-num">01</span>
             <h3>Connect with buyers</h3>
           </div>
         </div>
         <div class="col-md-4">
           <div class="pillar">
-            <img src="/assets/img/bees-2.png" alt="" loading="lazy" />
+            <span class="pillar-num">02</span>
             <h3>Build relationships</h3>
           </div>
         </div>
         <div class="col-md-4">
           <div class="pillar">
-            <img src="/assets/img/bees-3.png" alt="" loading="lazy" />
+            <span class="pillar-num">03</span>
             <h3>Fill your pipeline</h3>
           </div>
         </div>
@@ -117,7 +114,7 @@
   </section>
 
   <!-- THREE MESSAGES -->
-  <section class="section">
+  <section class="section bg-se-cream">
     <div class="container">
       <div class="row g-5">
         <div class="col-md-4">
@@ -186,21 +183,18 @@
       <div class="row g-4">
         <div class="col-md-4">
           <div class="criterion">
-            <img src="/assets/img/sketch-people.png" alt="" loading="lazy" />
             <h3>Are your buyers active on LinkedIn?</h3>
             <p>LinkedIn is where B2B trust gets earned. If your buyers engage there with peers, our engine can reach them organically.</p>
           </div>
         </div>
         <div class="col-md-4">
           <div class="criterion">
-            <img src="/assets/img/sketch-typewriter.png" alt="" loading="lazy" />
             <h3>Is your average deal size $20k or more?</h3>
             <p>Bigger is better. Splendid earns its keep on deals where one customer pays back the program.</p>
           </div>
         </div>
         <div class="col-md-4">
           <div class="criterion">
-            <img src="/assets/img/sketch-money.png" alt="" loading="lazy" />
             <h3>Do you have product-market fit?</h3>
             <p>We're a growth engine, not a discovery engine. The fastest results happen for teams who already know what to sell and who to sell it to.</p>
           </div>

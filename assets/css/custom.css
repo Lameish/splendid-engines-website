@@ -1,68 +1,112 @@
 /*
   Splendid Engines custom styles.
-  Bootstrap 5 handles layout primitives; this file holds:
-    - Brand color palette
-    - Typography
-    - Custom button treatment
-    - Section spacing / dark variants
-    - A handful of small components (stat blocks, logo strip)
+  Bootstrap 5 handles layout primitives; this file holds the brand system.
+
+  Typography note: Big Shoulders Display, Mulish, and Caveat are the open
+  substitutes for Hanley Pro Slim Bold, Brandon Grotesque, and Hanley
+  Monoline. Swap to the licensed faces when the font files are in hand.
 */
 
 :root {
-  --se-red:        #db4937;   /* primary CTA, accents */
-  --se-red-dark:   #6d2422;   /* hover, deeper accent */
-  --se-yellow:     #fcf74e;   /* highlight */
-  --se-dark:       #3f4a54;   /* dark sections background */
-  --se-ink:        #1d2429;   /* body text on light bg */
-  --se-muted:      #5a6470;
-  --se-cream:      #f7f4ee;   /* warm off-white section bg */
-  --se-line:       #e6e6e6;
+  /* Splendid palette (locked, do not change) */
+  --lagoon:    #153047;  /* primary dark surface, body text on light */
+  --poppy:     #DB4937;  /* CTAs, eyebrows, accent on dark */
+  --lake:      #377BDB;  /* links, secondary accent */
+  --daffodil:  #F2ED44;  /* highlighter rule, stat units on dark */
+  --mate:      #575C45;  /* atmospheric panels, dividers */
+  --snow:      #FFFFFF;  /* primary light background */
+  --ash:       #EBF4F7;  /* secondary light, cards on snow */
+  --ash-warm:  #F4ECDF;  /* warm light, "who we help" sections */
+
+  /* Derived */
+  --line:      rgba(21, 48, 71, 0.12);
+  --muted:     rgba(21, 48, 71, 0.62);
 }
 
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'Manrope', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-  color: var(--se-ink);
+  font-family: 'Mulish', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  color: var(--lagoon);
+  background: var(--snow);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 1.0625rem;
-  line-height: 1.65;
+  font-size: 1.0625rem;     /* 17px */
+  line-height: 1.6;
+  font-weight: 400;
 }
 
 h1, h2, h3, h4, h5, h6,
 .display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
-  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+  font-family: 'Big Shoulders Display', 'Mulish', system-ui, sans-serif;
   font-weight: 800;
-  letter-spacing: -0.02em;
-  line-height: 1.1;
-  color: var(--se-ink);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;          /* +30 tracking */
+  line-height: 1.05;
+  color: var(--lagoon);
+  margin-bottom: 1rem;
 }
 
-a { color: var(--se-red); text-decoration-thickness: 1px; text-underline-offset: 2px; }
-a:hover { color: var(--se-red-dark); }
+a { color: var(--lake); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a:hover { color: var(--lagoon); }
+
+/* ---------- Eyebrow (the structural label above every heading) ---------- */
+.eyebrow {
+  display: inline-block;
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-size: 0.8125rem;            /* 13px */
+  font-weight: 700;
+  letter-spacing: 0.18em;          /* +180 tracking */
+  text-transform: uppercase;
+  color: var(--poppy);
+  margin-bottom: 1rem;
+}
 
 /* ---------- Navbar ---------- */
-.navbar { padding-top: 0.875rem; padding-bottom: 0.875rem; }
-.navbar-brand { font-weight: 800; letter-spacing: -0.01em; display: inline-flex; align-items: center; gap: 0.625rem; }
+.navbar {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background: var(--snow) !important;
+  border-bottom: 1px solid var(--line);
+}
+.navbar-brand {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--lagoon);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+}
 .navbar-brand img { height: 36px; width: 36px; }
-.navbar .nav-link { font-weight: 600; color: var(--se-ink); }
-.navbar .nav-link:hover { color: var(--se-red); }
+.navbar .nav-link {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.95rem;
+  color: var(--lagoon);
+}
+.navbar .nav-link:hover { color: var(--poppy); }
 
 /* ---------- Buttons ---------- */
 .btn-se-primary {
-  background-color: var(--se-red);
-  border: 2px solid var(--se-red);
+  background-color: var(--poppy);
+  border: 2px solid var(--poppy);
   color: #fff;
+  font-family: 'Big Shoulders Display', sans-serif;
   font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
   padding: 0.75rem 1.5rem;
   border-radius: 999px;
   transition: background-color .15s ease, border-color .15s ease, transform .15s ease;
 }
 .btn-se-primary:hover,
 .btn-se-primary:focus {
-  background-color: var(--se-red-dark);
-  border-color: var(--se-red-dark);
+  background-color: #b53a2c;
+  border-color: #b53a2c;
   color: #fff;
   text-decoration: none;
 }
@@ -70,46 +114,60 @@ a:hover { color: var(--se-red-dark); }
 .btn-se-outline {
   background-color: transparent;
   border: 2px solid currentColor;
-  color: var(--se-ink);
+  color: var(--lagoon);
+  font-family: 'Big Shoulders Display', sans-serif;
   font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
   padding: 0.75rem 1.5rem;
   border-radius: 999px;
 }
-.btn-se-outline:hover { background-color: var(--se-ink); color: #fff; text-decoration: none; }
+.btn-se-outline:hover {
+  background-color: var(--lagoon);
+  color: #fff;
+  text-decoration: none;
+}
 
-.bg-se-dark .btn-se-outline { color: #fff; }
-.bg-se-dark .btn-se-outline:hover { background-color: #fff; color: var(--se-ink); }
+.bg-lagoon .btn-se-outline { color: #fff; }
+.bg-lagoon .btn-se-outline:hover { background-color: #fff; color: var(--lagoon); }
 
 /* ---------- Sections ---------- */
-.section { padding: 4.5rem 0; }
+.section { padding: 5rem 0; }              /* ≥80px per brand spec */
 .section-sm { padding: 3rem 0; }
-.section-lg { padding: 6rem 0; }
+.section-lg { padding: 6.5rem 0; }
 
-.bg-se-cream { background-color: var(--se-cream); }
-.bg-se-dark  { background-color: var(--se-dark); color: #fff; }
-.bg-se-dark h1, .bg-se-dark h2, .bg-se-dark h3,
-.bg-se-dark h4, .bg-se-dark h5, .bg-se-dark h6 { color: #fff; }
-.bg-se-red   { background-color: var(--se-red); color: #fff; }
-.bg-se-red h1, .bg-se-red h2, .bg-se-red h3,
-.bg-se-red h4, .bg-se-red h5, .bg-se-red h6 { color: #fff; }
+.bg-snow      { background-color: var(--snow); }
+.bg-ash       { background-color: var(--ash); }
+.bg-ash-warm  { background-color: var(--ash-warm); }
+.bg-lagoon    { background-color: var(--lagoon); color: #fff; }
+.bg-lagoon h1, .bg-lagoon h2, .bg-lagoon h3,
+.bg-lagoon h4, .bg-lagoon h5, .bg-lagoon h6 { color: #fff; }
+.bg-lagoon a  { color: #fff; }
+.bg-lagoon .eyebrow { color: var(--poppy); }
+.bg-lagoon .muted   { color: rgba(255,255,255,0.7); }
 
 /* ---------- Hero ---------- */
 .hero {
-  padding: 4.5rem 0 3.5rem;
+  padding: 6rem 0 5rem;
 }
 .hero-headline {
-  font-size: clamp(2.25rem, 4vw, 3.5rem);
-  line-height: 1.2;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1.0;
   margin-bottom: 1.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
 }
 .hero-body {
-  font-size: 1.125rem;
-  line-height: 1.7;
-  color: var(--se-ink);
+  font-family: 'Mulish', sans-serif;
+  text-transform: none;
+  font-size: 1.25rem;
+  line-height: 1.55;
   margin-bottom: 2rem;
-  max-width: 620px;
+  max-width: 640px;
   margin-left: auto;
   margin-right: auto;
+  font-weight: 400;
+  letter-spacing: 0;
 }
 .hero-cta {
   display: flex;
@@ -118,57 +176,52 @@ a:hover { color: var(--se-red-dark); }
   justify-content: center;
 }
 @media (max-width: 575.98px) {
-  .hero { padding: 2.5rem 0 2rem; }
-  .hero-headline { font-size: 2rem; line-height: 1.15; margin-bottom: 1.25rem; }
-  .hero-body { margin-bottom: 1.5rem; }
+  .hero { padding: 3.5rem 0 3rem; }
+  .hero-headline { font-size: 2.5rem; }
+  .hero-body { font-size: 1.0625rem; margin-bottom: 1.5rem; }
 }
 
-/* yellow underline highlight under inline text */
-.se-highlight {
-  background: linear-gradient(transparent 60%, var(--se-yellow) 60%);
-  padding: 0 0.1em;
+/* Lagoon hero variant: dark hero with one Poppy-accented word */
+.hero.bg-lagoon .hero-body { color: rgba(255,255,255,0.85); }
+
+/* Daffodil highlighter (per Splendid Visual Brand §5).
+   Light surfaces only. One word per headline. Max 2 per page.
+   Roughly 38-42% of cap height, sitting on baseline. */
+.hl {
+  background: linear-gradient(to top, var(--daffodil) 12%, var(--daffodil) 42%, transparent 42%);
+  padding: 0 0.04em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
-/* ---------- Editorial system ---------- */
+/* Dark-surface accent equivalent: Poppy text on a single word */
+.accent-dark { color: var(--poppy); }
 
-/* Small all-caps label that sits above a section heading. Sparingly. */
-.section-label {
-  display: inline-block;
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--se-red);
-  margin-bottom: 1rem;
-}
-
-/* Serif accent treatment for "thesis" paragraphs and pull quotes.
-   Fraunces is a variable serif that pairs well with Manrope. */
+/* ---------- Editorial body treatments ---------- */
+/* A weightier body paragraph for thesis/lead moments. Still Mulish — no serif. */
 .thesis {
-  font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
-  font-size: clamp(1.25rem, 1.75vw, 1.625rem);
+  font-size: clamp(1.25rem, 1.75vw, 1.5rem);
   font-weight: 400;
-  line-height: 1.45;
-  color: var(--se-ink);
-  font-variation-settings: "SOFT" 30;
+  line-height: 1.5;
+  color: var(--lagoon);
 }
 
-/* Drop cap on opening paragraph of an editorial section. */
+/* Drop cap on opening paragraph of an editorial section. Display-only. */
 .drop-cap::first-letter {
-  font-family: 'Fraunces', Georgia, serif;
-  font-size: 4.25rem;
-  font-weight: 600;
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-size: 4.5rem;
+  font-weight: 800;
   float: left;
   line-height: 0.85;
-  margin: 0.15rem 0.55rem -0.4rem 0;
-  color: var(--se-red);
+  margin: 0.15rem 0.55rem -0.2rem 0;
+  color: var(--poppy);
+  text-transform: uppercase;
 }
 
-/* Section divider — a thin centered horizontal rule used between
-   editorial moments. */
+/* Section divider */
 hr.section-divider {
   border: 0;
-  border-top: 1px solid var(--se-line);
+  border-top: 1px solid var(--line);
   max-width: 80px;
   margin: 0 auto;
   opacity: 1;
@@ -192,69 +245,58 @@ hr.section-divider {
 }
 .logo-strip img:hover { filter: grayscale(0); opacity: 1; }
 
-/* ---------- Three pillars ---------- */
+/* ---------- Pillars (two columns max per brand spec) ---------- */
 .pillar {
-  text-align: center;
   padding: 1.5rem 1rem;
 }
-.pillar-num {
-  display: block;
-  font-size: 0.95rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  color: var(--se-red);
-  margin-bottom: 0.5rem;
-}
-.pillar h3 { font-size: 1.5rem; margin-bottom: 0; }
+.pillar h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
 
-/* ---------- Stats ---------- */
+/* ---------- Stats (claim-band) ---------- */
 .stat {
   text-align: center;
-  padding: 1rem 0.5rem;
+  padding: 1.5rem 0.5rem;
 }
 .stat .stat-number {
-  font-size: clamp(2.5rem, 5vw, 3.75rem);
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-size: clamp(3.5rem, 7vw, 5.5rem);
   font-weight: 800;
   line-height: 1;
-  color: var(--se-yellow);
-  letter-spacing: -0.02em;
+  color: #fff;
+  letter-spacing: 0.01em;
   display: block;
   margin-bottom: 0.5rem;
 }
+.stat .stat-number .stat-unit { color: var(--daffodil); }
 .stat .stat-label {
+  font-family: 'Mulish', sans-serif;
   font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.8);
   line-height: 1.35;
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 500;
 }
 
-/* ---------- Eligibility (who we help) ---------- */
+/* ---------- Criterion cards (who we help) ---------- */
 .criterion {
-  padding: 1.5rem;
-  border-left: 3px solid var(--se-red);
+  padding: 1.5rem 0 1.5rem 1.5rem;
+  border-left: 3px solid var(--poppy);
   height: 100%;
 }
-.criterion h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
-.criterion p { color: var(--se-muted); margin-bottom: 0; }
+.criterion h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
+.criterion p { color: var(--muted); margin-bottom: 0; font-family: 'Mulish', sans-serif; text-transform: none; letter-spacing: 0; font-weight: 400; }
 
 /* ---------- Testimonial ---------- */
 .testimonial-quote {
-  font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+  font-family: 'Mulish', sans-serif;
   font-size: clamp(1.375rem, 2.1vw, 1.75rem);
   font-weight: 400;
-  line-height: 1.4;
-  color: var(--se-ink);
+  line-height: 1.45;
+  text-transform: none;
+  letter-spacing: 0;
   margin-bottom: 1.5rem;
-  font-variation-settings: "SOFT" 30;
 }
-.testimonial-quote::before {
-  content: "\201C";
-  display: block;
-  font-size: 4rem;
-  line-height: 0.5;
-  color: var(--se-red);
-  margin-bottom: 1rem;
-  font-family: Georgia, 'Times New Roman', serif;
-}
+.bg-lagoon .testimonial-quote { color: #fff; }
 .testimonial-attr img {
   width: 56px;
   height: 56px;
@@ -262,24 +304,60 @@ hr.section-divider {
   object-fit: cover;
   margin-right: 0.875rem;
 }
-.testimonial-attr-name { font-weight: 700; color: var(--se-ink); }
-.testimonial-attr-role { color: var(--se-muted); font-size: 0.95rem; }
+.testimonial-attr-name {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.testimonial-attr-role {
+  font-family: 'Mulish', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--muted);
+  text-transform: none;
+  letter-spacing: 0;
+}
+.bg-lagoon .testimonial-attr-role { color: rgba(255,255,255,0.7); }
 
-/* ---------- Footer ---------- */
-.site-footer { background-color: var(--se-dark); color: rgba(255,255,255,0.8); }
-.site-footer a { color: rgba(255,255,255,0.85); text-decoration: none; }
-.site-footer a:hover { color: var(--se-yellow); }
-.site-footer .footer-logo { max-height: 64px; width: auto; }
-.site-footer .footer-tagline { max-height: 48px; width: auto; }
+/* ---------- Footer (light) ---------- */
+.site-footer {
+  background-color: var(--snow);
+  color: var(--lagoon);
+  border-top: 1px solid var(--line);
+}
+.site-footer a { color: var(--lagoon); text-decoration: none; }
+.site-footer a:hover { color: var(--poppy); }
+.site-footer .footer-logo { max-height: 56px; width: auto; }
+.site-footer .footer-tagline-script {
+  font-family: 'Caveat', cursive;
+  font-size: 1.5rem;
+  color: var(--poppy);
+  line-height: 1;
+}
+.site-footer .footer-meta {
+  font-family: 'Mulish', sans-serif;
+  font-size: 0.875rem;
+  color: var(--muted);
+  text-transform: none;
+  letter-spacing: 0;
+}
 
 /* ---------- Utility ---------- */
-.text-se-red { color: var(--se-red) !important; }
-.text-se-yellow { color: var(--se-yellow) !important; }
-.text-se-muted { color: var(--se-muted) !important; }
+.text-poppy    { color: var(--poppy) !important; }
+.text-daffodil { color: var(--daffodil) !important; }
+.text-lake     { color: var(--lake) !important; }
+.text-lagoon   { color: var(--lagoon) !important; }
+.text-muted-se { color: var(--muted) !important; }
 
-/* Slightly tighter container on text-heavy sections */
+/* Editorial measure for long-form text */
 .container-narrow {
-  max-width: 880px;
+  max-width: 720px;             /* ~65-70ch at 18px */
+  margin-left: auto;
+  margin-right: auto;
+}
+.container-medium {
+  max-width: 980px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -288,39 +366,83 @@ hr.section-divider {
 .path-card {
   display: block;
   height: 100%;
-  background: #fff;
-  border: 1px solid var(--se-line);
-  border-radius: 8px;
-  padding: 2rem;
+  background: var(--snow);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 2.25rem 2rem;
   text-decoration: none;
-  color: var(--se-ink);
+  color: var(--lagoon);
   transition: border-color .15s ease, transform .15s ease, box-shadow .15s ease;
 }
 .path-card:hover {
-  border-color: var(--se-red);
-  color: var(--se-ink);
+  border-color: var(--poppy);
+  color: var(--lagoon);
   text-decoration: none;
   transform: translateY(-2px);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 12px 32px rgba(21, 48, 71, 0.06);
 }
 .path-card h2,
-.path-card h3 {
-  color: var(--se-ink);
-}
+.path-card h3 { color: var(--lagoon); }
 .path-card-cta {
   display: inline-block;
+  font-family: 'Big Shoulders Display', sans-serif;
   font-weight: 700;
-  color: var(--se-red);
-  letter-spacing: 0.02em;
+  color: var(--poppy);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.95rem;
 }
-.path-card:hover .path-card-cta {
-  color: var(--se-red-dark);
-}
+.path-card:hover .path-card-cta { color: var(--lagoon); }
 
-/* Reduce default Bootstrap card-like overuse in mobile */
+/* ---------- Long-form writing (report layouts) ---------- */
+.longform p,
+.longform li {
+  font-family: 'Mulish', sans-serif;
+  font-size: 1.125rem;          /* 18px */
+  line-height: 1.65;
+  margin-bottom: 1.25rem;
+}
+.longform h2 {
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  margin-top: 3rem;
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.03em;
+}
+.longform h3 {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+.longform .pull-quote {
+  font-family: 'Mulish', sans-serif;
+  font-size: clamp(1.5rem, 2.4vw, 2rem);
+  font-weight: 400;
+  line-height: 1.4;
+  text-transform: none;
+  letter-spacing: 0;
+  padding: 2.5rem 0;
+}
+.longform .stat-feature {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-size: clamp(5rem, 12vw, 9rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: var(--lagoon);
+  text-align: center;
+  display: block;
+  margin: 2rem 0 0.5rem;
+}
+.bg-lagoon .longform .stat-feature { color: #fff; }
+.longform .stat-feature .stat-unit { color: var(--poppy); }
+.bg-lagoon .longform .stat-feature .stat-unit { color: var(--daffodil); }
+
+/* Responsive tightening */
 @media (max-width: 767.98px) {
-  .section { padding: 3rem 0; }
-  .section-lg { padding: 4rem 0; }
+  .section { padding: 3.5rem 0; }
+  .section-lg { padding: 4.5rem 0; }
   .hero-headline { font-size: 2.25rem; }
-  .stat { padding: 0.5rem 0.25rem; }
+  .stat { padding: 0.75rem 0.25rem; }
+  .navbar .nav-link { padding: 0.5rem 0.75rem; }
 }

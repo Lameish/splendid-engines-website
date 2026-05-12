@@ -5,18 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>[Piece title] - Splendid Engines</title>
   <meta name="description" content="[One-sentence summary of the piece.]" />
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon-splendid.svg" />
   <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=Mulish:wght@400;500;600;700&family=Caveat:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/custom.css" />
 
-  <!-- OPEN GRAPH (set these for each piece so it looks right when shared) -->
+  <!-- Open Graph (set these for each piece so it looks right when shared) -->
   <meta property="og:title" content="[Piece title]" />
   <meta property="og:description" content="[One-sentence summary of the piece.]" />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://splendidengines.com/writing/[slug]/" />
-  <!-- <meta property="og:image" content="https://splendidengines.com/assets/img/[social-card].jpg" /> -->
 </head>
 <body>
 
@@ -28,13 +28,19 @@
      date below with real values
   3. Replace the body content under <main> with the piece itself
   4. Add an entry to writing/index.html linking to /writing/[your-slug]/
-  5. If the piece warrants something bespoke (custom typography,
-     embedded media, interactive bits), add it. This is a starting
-     point, not a straitjacket.
+
+  Brand notes (per Splendid Visual Brand):
+  - Full Light layout: Snow / Ash / Ash Warm. Lagoon allowed only for a
+    pull-quote section, claim band, or closing bookend.
+  - Eyebrow above every section heading (.eyebrow).
+  - Max 2 Daffodil highlights (.hl) across the whole piece, on light
+    surfaces only. On Lagoon, use .accent-dark (Poppy) instead.
+  - Single Poppy CTA (.btn-se-primary) at the end.
+  - Body in Mulish (default). Display in Big Shoulders Display.
 -->
 
 <!-- HEADER (canonical: _includes/header.html) -->
-<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+<nav class="navbar navbar-expand-lg">
   <div class="container">
     <a class="navbar-brand" href="/">
       <img src="/assets/img/favicon-splendid.svg" alt="" />
@@ -44,37 +50,63 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="mainNav">
-      <ul class="navbar-nav ms-auto">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
         <li class="nav-item"><a class="nav-link" href="/sales/">For sales</a></li>
         <li class="nav-item"><a class="nav-link" href="/marketing/">For marketing</a></li>
         <li class="nav-item"><a class="nav-link" href="/case-study/">Case study</a></li>
         <li class="nav-item"><a class="nav-link" href="/about/">About</a></li>
-        <li class="nav-item active"><a class="nav-link" href="/writing/">Writing</a></li>
+        <li class="nav-item"><a class="nav-link" href="/writing/">Writing</a></li>
         <li class="nav-item"><a class="nav-link" href="/contact/">Contact</a></li>
-        <li class="nav-item ms-lg-3"><a class="btn btn-se-primary btn-sm" href="https://meetings.hubspot.com/ef-p" target="_blank" rel="noopener">Book a call</a></li>
+        <li class="nav-item ms-lg-3"><a class="btn-se-primary" href="https://meetings.hubspot.com/ef-p" target="_blank" rel="noopener">Book a call</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<main>
-  <article class="container py-5" style="max-width: 680px;">
-    <header class="mb-5">
-      <span class="section-label">Essay</span>
-      <h1 class="display-5 fw-bold mt-2 mb-3">[Piece title]</h1>
-      <div class="text-se-muted">[Month DD, YYYY]</div>
-    </header>
+<main class="longform">
 
-    <p class="thesis mb-4">[Opening paragraph - sets the thesis. Use the .thesis class for serif accent treatment when it earns it.]</p>
+  <!-- HEADER -->
+  <section class="hero text-center bg-snow">
+    <div class="container container-narrow">
+      <span class="eyebrow">[Type — Essay / Report / Note]</span>
+      <h1 class="hero-headline">[Piece title]</h1>
+      <p class="hero-body">[One-sentence summary of the piece.]</p>
+      <div class="text-muted-se" style="font-size: 0.9rem;">[Month DD, YYYY]</div>
+    </div>
+  </section>
 
-    <p>[Body paragraph. Standard sans-serif body type. Keep paragraphs tight.]</p>
+  <!-- BODY -->
+  <section class="section bg-snow">
+    <div class="container container-narrow">
+      <p class="thesis mb-4">[Opening paragraph — sets the thesis. .thesis is the larger-weight body class.]</p>
 
-    <h2 class="mt-5 mb-3">[Section heading]</h2>
+      <p>[Body paragraph. Mulish, 18px, line-height 1.65. Keep paragraphs tight.]</p>
 
-    <p>[More body. For pull quotes, wrap a blockquote in &lt;blockquote class="testimonial-quote"&gt;.]</p>
+      <h2>[Section heading]</h2>
+      <p>[More body. For one or two key phrases, wrap in <span class="hl">&lt;span class="hl"&gt;</span> for the Daffodil highlighter. Max 2 per piece.]</p>
+    </div>
+  </section>
 
-    <p>For a key word or phrase, wrap it in <span class="se-highlight">&lt;span class="se-highlight"&gt;</span> for the brand yellow underline. Use sparingly.</p>
-  </article>
+  <!-- Optional pull-quote section (Lagoon bookend) -->
+  <!--
+  <section class="section bg-lagoon">
+    <div class="container container-narrow text-center">
+      <span class="eyebrow">Pull quote</span>
+      <p class="pull-quote">[A line worth sitting on its own surface.]</p>
+    </div>
+  </section>
+  -->
+
+  <!-- CTA -->
+  <section class="section bg-snow text-center">
+    <div class="container container-narrow">
+      <span class="eyebrow">Get in touch</span>
+      <h2 class="display-5 mb-3">Talk to us.</h2>
+      <p class="thesis mb-4">[One-line CTA paragraph.]</p>
+      <a href="https://meetings.hubspot.com/ef-p" target="_blank" rel="noopener" class="btn-se-primary">Book a call</a>
+    </div>
+  </section>
+
 </main>
 
 <!-- FOOTER (canonical: _includes/footer.html) -->
@@ -82,13 +114,13 @@
   <div class="container">
     <div class="row align-items-center g-4">
       <div class="col-md-4 text-center text-md-start">
-        <img src="/assets/img/logo-splendid.png" alt="Splendid Engines" class="footer-logo mb-3" />
+        <img src="/assets/img/logo-splendid.png" alt="Splendid Engines" class="footer-logo mb-2" />
         <div>
-          <img src="/assets/img/tagline-niceday.png" alt="Nice day, isn't it?" class="footer-tagline" />
+          <span class="footer-tagline-script">Nice day, isn't it?</span>
         </div>
       </div>
       <div class="col-md-4 text-center">
-        <ul class="list-inline mb-0 small">
+        <ul class="list-inline mb-0">
           <li class="list-inline-item me-3"><a href="/">Home</a></li>
           <li class="list-inline-item me-3"><a href="/about/">About</a></li>
           <li class="list-inline-item me-3"><a href="/case-study/">Case study</a></li>
@@ -96,8 +128,8 @@
           <li class="list-inline-item"><a href="/contact/">Contact</a></li>
         </ul>
       </div>
-      <div class="col-md-4 text-center text-md-end small">
-        &copy; <span id="footer-year">2026</span> Splendid Engines. Proudly operating in Canada and the USA.
+      <div class="col-md-4 text-center text-md-end footer-meta">
+        &copy; <span id="footer-year">2026</span> Splendid Engines. Operating in Canada and the USA.
       </div>
     </div>
   </div>

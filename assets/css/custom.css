@@ -90,6 +90,47 @@ a:hover { color: var(--lagoon); }
 }
 .navbar .nav-link:hover { color: var(--poppy); }
 
+/* Dropdown ("Who we help") — brand-styled override on Bootstrap defaults */
+.navbar .dropdown-toggle::after {
+  vertical-align: 0.18em;
+  margin-left: 0.4em;
+  border-top-color: currentColor;
+  opacity: 0.55;
+}
+.navbar .dropdown-menu {
+  margin-top: 0.5rem;
+  padding: 0.5rem 0;
+  background-color: var(--snow);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  box-shadow: 0 8px 24px rgba(21, 48, 71, 0.08);
+  min-width: 11rem;
+}
+.navbar .dropdown-item {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.95rem;
+  color: var(--lagoon);
+  padding: 0.625rem 1.25rem;
+}
+.navbar .dropdown-item:hover,
+.navbar .dropdown-item:focus {
+  background-color: var(--ash);
+  color: var(--poppy);
+}
+
+/* Collapsed (mobile) nav: dropdown opens inline, no shadow/border, full width */
+@media (max-width: 991.98px) {
+  .navbar .dropdown-menu {
+    border: 0;
+    box-shadow: none;
+    padding-left: 1rem;
+    margin-top: 0;
+  }
+}
+
 /* ---------- Buttons ---------- */
 .btn-se-primary {
   background-color: var(--poppy);

@@ -4,17 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Writing - Splendid Engines</title>
-  <meta name="description" content="Essays and pieces from Splendid Engines." />
+  <meta name="description" content="Considered essays and reports from Splendid Engines." />
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon-splendid.svg" />
   <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=Mulish:wght@400;500;600;700&family=Caveat:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/custom.css" />
 </head>
 <body>
 
 <!-- HEADER (canonical: _includes/header.html) -->
-<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+<nav class="navbar navbar-expand-lg">
   <div class="container">
     <a class="navbar-brand" href="/">
       <img src="/assets/img/favicon-splendid.svg" alt="" />
@@ -24,14 +25,14 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="mainNav">
-      <ul class="navbar-nav ms-auto">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
         <li class="nav-item"><a class="nav-link" href="/sales/">For sales</a></li>
         <li class="nav-item"><a class="nav-link" href="/marketing/">For marketing</a></li>
         <li class="nav-item"><a class="nav-link" href="/case-study/">Case study</a></li>
         <li class="nav-item"><a class="nav-link" href="/about/">About</a></li>
-        <li class="nav-item active"><a class="nav-link" href="/writing/">Writing</a></li>
+        <li class="nav-item"><a class="nav-link" href="/writing/">Writing</a></li>
         <li class="nav-item"><a class="nav-link" href="/contact/">Contact</a></li>
-        <li class="nav-item ms-lg-3"><a class="btn btn-se-primary btn-sm" href="https://meetings.hubspot.com/ef-p" target="_blank" rel="noopener">Book a call</a></li>
+        <li class="nav-item ms-lg-3"><a class="btn-se-primary" href="https://meetings.hubspot.com/ef-p" target="_blank" rel="noopener">Book a call</a></li>
       </ul>
     </div>
   </div>
@@ -40,11 +41,11 @@
 <main>
 
   <!-- HERO -->
-  <section class="hero text-center">
+  <section class="hero text-center bg-snow">
     <div class="container container-narrow">
-      <span class="section-label">Writing</span>
-      <h1 class="hero-headline mt-2">
-        Considered <span class="se-highlight">essays</span>, not posts.
+      <span class="eyebrow">Writing</span>
+      <h1 class="hero-headline">
+        Considered <span class="hl">essays</span>, not posts.
       </h1>
       <p class="hero-body">
         No post treadmill. No SEO listicles. Each piece is its own thing, written when there's something worth writing about.
@@ -53,20 +54,29 @@
   </section>
 
   <!-- ESSAY LIST -->
-  <section class="pb-5">
+  <section class="section bg-snow">
     <div class="container container-narrow">
       <ul class="list-unstyled mb-0">
         <!--
           To add a new piece: create writing/[slug]/index.html (copy
-          writing/_template/ as a starting point) and add a line here:
+          writing/_template/ as a starting point) and add an item here:
 
           <li class="py-4 border-top">
-            <a href="/writing/[slug]/" class="fs-4 text-decoration-none fw-bold d-block mb-1">[Title]</a>
-            <div class="text-se-muted small">[Month DD, YYYY]</div>
+            <span class="eyebrow">[Type — Essay / Report / Note]</span>
+            <a href="/writing/[slug]/" class="d-block text-decoration-none">
+              <h2 class="h3 mb-2 mt-2">[Title]</h2>
+            </a>
+            <p class="text-muted-se mb-2">[One-sentence summary.]</p>
+            <div class="text-muted-se" style="font-size: 0.9rem;">[Month DD, YYYY]</div>
           </li>
         -->
-        <li class="py-5 border-top text-center">
-          <p class="text-se-muted mb-0">No pieces published yet. Check back soon.</p>
+        <li class="py-4 border-top" style="border-color: var(--line) !important;">
+          <span class="eyebrow">Flagship report</span>
+          <a href="/writing/trust-gap/" class="d-block text-decoration-none">
+            <h2 class="h3 mb-2 mt-2 text-lagoon">The Trust Gap.</h2>
+          </a>
+          <p class="text-muted-se mb-2">Why B2B buyers tune out vendors and turn to peers, and what revenue leaders should do about it.</p>
+          <div class="text-muted-se" style="font-size: 0.9rem;">May 14, 2026</div>
         </li>
       </ul>
     </div>
@@ -79,13 +89,13 @@
   <div class="container">
     <div class="row align-items-center g-4">
       <div class="col-md-4 text-center text-md-start">
-        <img src="/assets/img/logo-splendid.png" alt="Splendid Engines" class="footer-logo mb-3" />
+        <img src="/assets/img/logo-splendid.png" alt="Splendid Engines" class="footer-logo mb-2" />
         <div>
-          <img src="/assets/img/tagline-niceday.png" alt="Nice day, isn't it?" class="footer-tagline" />
+          <span class="footer-tagline-script">Nice day, isn't it?</span>
         </div>
       </div>
       <div class="col-md-4 text-center">
-        <ul class="list-inline mb-0 small">
+        <ul class="list-inline mb-0">
           <li class="list-inline-item me-3"><a href="/">Home</a></li>
           <li class="list-inline-item me-3"><a href="/about/">About</a></li>
           <li class="list-inline-item me-3"><a href="/case-study/">Case study</a></li>
@@ -93,8 +103,8 @@
           <li class="list-inline-item"><a href="/contact/">Contact</a></li>
         </ul>
       </div>
-      <div class="col-md-4 text-center text-md-end small">
-        &copy; <span id="footer-year">2026</span> Splendid Engines. Proudly operating in Canada and the USA.
+      <div class="col-md-4 text-center text-md-end footer-meta">
+        &copy; <span id="footer-year">2026</span> Splendid Engines. Operating in Canada and the USA.
       </div>
     </div>
   </div>

@@ -446,3 +446,44 @@ hr.section-divider {
   .stat { padding: 0.75rem 0.25rem; }
   .navbar .nav-link { padding: 0.5rem 0.75rem; }
 }
+
+/* ---------- Scroll reveals (opt-in via reveal.js) ---------- */
+/* Editorial register: subtle fades, restrained translation, no bouncing. */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stat blocks get a touch of scale + spring on top of the fade. */
+.reveal-stat {
+  opacity: 0;
+  transform: translateY(14px) scale(0.94);
+  transition: opacity 0.65s ease-out, transform 0.7s cubic-bezier(0.34, 1.4, 0.64, 1);
+  will-change: opacity, transform;
+}
+.reveal-stat.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Stagger helper. Add data-reveal-delay="1|2|3" on siblings to stagger them. */
+.reveal[data-reveal-delay="1"],
+.reveal-stat[data-reveal-delay="1"] { transition-delay: 90ms; }
+.reveal[data-reveal-delay="2"],
+.reveal-stat[data-reveal-delay="2"] { transition-delay: 180ms; }
+.reveal[data-reveal-delay="3"],
+.reveal-stat[data-reveal-delay="3"] { transition-delay: 270ms; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .reveal-stat {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}

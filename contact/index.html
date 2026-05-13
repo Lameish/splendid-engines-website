@@ -51,45 +51,19 @@
 
 <main>
 
-  <!-- HERO -->
-  <section class="hero text-center bg-snow">
-    <div class="container container-narrow">
-      <span class="eyebrow">The offer</span>
-      <h1 class="hero-headline">
-        Get a free analysis of your <span class="hl">TAM</span> on LinkedIn.
-      </h1>
-      <p class="hero-body">
-        Within a week you'll know the 20 most influential people in your target market who are active on LinkedIn, plus the 3 you'd interview to climb that influence ladder, plus the 3 most likely to say yes if you pitched them.
-      </p>
-    </div>
-  </section>
-
-  <!-- OFFER CARD -->
-  <section class="section bg-ash">
+  <!-- HERO with embedded calendar -->
+  <section class="hero bg-snow" style="padding-top: 3.5rem; padding-bottom: 3rem;">
     <div class="container">
-      <div class="offer-card">
-        <div class="offer-eyebrow">
-          <span class="eyebrow">Free for senior B2B revenue leaders</span>
-          <span class="offer-scarcity">5 per quarter</span>
+      <div class="row align-items-start g-5">
+        <div class="col-lg-5">
+          <span class="eyebrow">The offer</span>
+          <h1 class="hero-headline">Get a free analysis of your <span class="hl">TAM</span> on LinkedIn.</h1>
+          <p class="hero-body">Within a week you'll know the 20 most influential people in your target market who are active on LinkedIn, the 3 you'd interview to climb that influence ladder, and the 3 most likely to say yes if you pitched them.</p>
+          <p class="text-muted-se mb-0">15 minutes. No deck, no demo. Real humans on the other end.</p>
         </div>
-        <h2>The deliverable.</h2>
-        <p class="offer-pitch">A LinkedIn-anchored map of the influence in your target market: who matters, who you should talk to first, and who is most likely to say yes when you do.</p>
-        <ul class="offer-bullets">
-          <li><strong>Top 20 influencers in your TAM</strong> who are active on LinkedIn</li>
-          <li><strong>The 3 to interview</strong> to climb the influence ladder</li>
-          <li><strong>The 3 most likely to say yes</strong> if you pitched them today</li>
-          <li>Keep the underlying data (account + contact database)</li>
-          <li>Topic-interest breakdown of what your TAM actually talks about</li>
-          <li>3 most-likely-to-say-yes pitches drafted, ready to send</li>
-        </ul>
-        <div class="offer-meta">
-          <div><strong>Time</strong>~5 business days from a 15-min intake call.</div>
-          <div><strong>Fit</strong>B2B, $20k+ ACV, LinkedIn-active buyers.</div>
-          <div><strong>Cost</strong>Free. Zero risk.</div>
-        </div>
-        <div class="offer-cta">
-          <a href="https://meetings.hubspot.com/ef-p" target="_blank" rel="noopener" class="btn-se-primary">Book the intake call</a>
-          <p class="offer-proof">We do this for Adikteev, Bidease, and C8 Health every day.</p>
+        <div class="col-lg-7">
+          <span class="eyebrow d-lg-none">Pick a time</span>
+          <div class="meetings-iframe-container" data-src="https://meetings.hubspot.com/ef-p?embed=true" style="min-height: 680px;"></div>
         </div>
       </div>
     </div>
@@ -103,21 +77,21 @@
         <h2 class="display-6">Three steps. Under a week.</h2>
       </div>
       <div class="row g-4">
-        <div class="col-md-6">
+        <div class="col-md-4">
           <div class="criterion h-100">
             <span class="eyebrow">Step 01</span>
             <h3>Book a 15-min intake call.</h3>
             <p>Tell us your target market criteria: industries, titles, deal size, regions. We capture what we need to start.</p>
           </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
           <div class="criterion h-100">
             <span class="eyebrow">Step 02</span>
             <h3>We build the analysis.</h3>
             <p>Our operators run the same playbook we run for paying clients: identify the influencers, score the network, draft the pitches.</p>
           </div>
         </div>
-        <div class="col-12">
+        <div class="col-md-4">
           <div class="criterion h-100">
             <span class="eyebrow">Step 03</span>
             <h3>You get the deliverable.</h3>
@@ -128,22 +102,11 @@
     </div>
   </section>
 
-  <!-- BOOK -->
-  <section class="section bg-ash-warm">
-    <div class="container container-narrow text-center">
-      <span class="eyebrow">Book the call</span>
-      <h2 class="display-6 mb-3">Pick a time.</h2>
-      <p class="thesis mb-4">Real humans on the other end. 15 minutes. No deck, no demo. Just enough to get the deliverable started.</p>
-      <a href="https://meetings.hubspot.com/ef-p" target="_blank" rel="noopener" class="btn-se-primary">Open the calendar</a>
-    </div>
-  </section>
-
-  <!-- ALT CONTACT -->
-  <section class="section bg-snow">
+  <!-- EMAIL ALT -->
+  <section class="section-sm bg-ash-warm">
     <div class="container container-narrow text-center">
       <span class="eyebrow">Or just say hi</span>
-      <h2 class="display-6 mb-3">Email works too.</h2>
-      <p class="thesis mb-4">Not ready for the intake call? Send a note and tell us what you're working on. Real humans read every message.</p>
+      <p class="thesis mb-3">Not ready for a call? Email works too.</p>
       <a href="mailto:evan@splendidengines.com" class="btn-se-outline">evan@splendidengines.com</a>
     </div>
   </section>
@@ -178,5 +141,7 @@
 <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
 
 <script src="/assets/js/bootstrap.bundle.min.js"></script>
+<!-- HubSpot meetings embed -->
+<script type="text/javascript" src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>
 </body>
 </html>

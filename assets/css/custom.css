@@ -959,6 +959,18 @@ hr.section-divider {
   .principles-row .principle.span-2 { grid-column: 1; }
 }
 
+/* Partner photo (about page): blend white image background into the
+   section behind so the JPG corners don't read as a hard white card.
+   mix-blend-mode: multiply means anything brighter than the section
+   background gets replaced by the section colour. */
+.partner-photo {
+  max-width: 240px;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  mix-blend-mode: multiply;
+}
+
 /* Featured image slot for writing index */
 .entry-with-image {
   display: grid;

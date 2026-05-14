@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1584 396" width="1584" height="396" role="img" aria-labelledby="title">
+  <title id="title">Splendid Engines LinkedIn banner: People Follow People</title>
+
+  <!-- Lagoon background (primary dark surface, per brand spec) -->
+  <rect width="1584" height="396" fill="#153047"/>
+
+  <!-- Sociogram (right side). Hand-drawn network: one highlighted "buyer" node in Poppy.
+       Sits on the right so it isn't covered by the LinkedIn profile pic that overlaps the bottom-left. -->
+  <g stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="square" fill="none" opacity="0.22">
+    <line x1="1330" y1="95"  x2="1450" y2="155"/>
+    <line x1="1450" y1="155" x2="1380" y2="280"/>
+    <line x1="1450" y1="155" x2="1535" y2="235"/>
+    <line x1="1330" y1="95"  x2="1285" y2="215"/>
+    <line x1="1380" y1="280" x2="1285" y2="215"/>
+    <line x1="1285" y1="215" x2="1450" y2="155"/>
+    <line x1="1535" y1="235" x2="1380" y2="280"/>
+  </g>
+  <g fill="#FFFFFF" opacity="0.55">
+    <circle cx="1330" cy="95"  r="5"/>
+    <circle cx="1380" cy="280" r="5"/>
+    <circle cx="1535" cy="235" r="5"/>
+    <circle cx="1285" cy="215" r="5"/>
+  </g>
+  <!-- The highlighted node: a single Poppy accent to echo the headline emphasis -->
+  <circle cx="1450" cy="155" r="11" fill="#DB4937"/>
+
+  <!-- Headline. Two lines, centered. White on Lagoon, with one word in Poppy
+       (Daffodil highlighter is forbidden on dark per brand spec). -->
+  <text x="792" y="175"
+        font-family="'Big Shoulders Display', 'Hanley Pro Slim Bold', Impact, sans-serif"
+        font-weight="700"
+        font-size="112"
+        letter-spacing="4"
+        text-anchor="middle"
+        fill="#FFFFFF">PEOPLE FOLLOW</text>
+
+  <text x="792" y="295"
+        font-family="'Big Shoulders Display', 'Hanley Pro Slim Bold', Impact, sans-serif"
+        font-weight="700"
+        font-size="112"
+        letter-spacing="4"
+        text-anchor="middle"
+        fill="#DB4937">PEOPLE.</text>
+
+  <!-- Wordmark, bottom-right. Placeholder typographic lockup.
+       Production should swap this for the white-on-Lagoon stamp logo PNG from Brandon. -->
+  <text x="1530" y="370"
+        font-family="'Big Shoulders Display', 'Hanley Pro Slim Bold', sans-serif"
+        font-weight="700"
+        font-size="16"
+        letter-spacing="3"
+        text-anchor="end"
+        fill="#FFFFFF"
+        opacity="0.7">SPLENDID ENGINES</text>
+</svg>

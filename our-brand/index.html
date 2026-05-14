@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Brand Guidelines - Splendid Engines</title>
+  <meta name="description" content="Brand assets, color palette, typography, boilerplate copy, and voice guidelines for press, designers, and partners." />
+  <meta name="robots" content="noindex" />
+
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon-splendid.svg" />
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=Mulish:wght@400;500;600;700&family=Caveat:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/custom.css" />
+
+  <style>
+    /* Brand page-specific components */
+
+    .brand-section {
+      padding: 4rem 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .brand-section:last-of-type {
+      border-bottom: none;
+    }
+    .brand-section-label {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--poppy);
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    .brand-section h2 {
+      font-size: 1.75rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+    .brand-section .section-desc {
+      color: var(--muted);
+      margin-bottom: 2.5rem;
+      max-width: 600px;
+    }
+
+    /* Color swatches */
+    .color-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 1rem;
+    }
+    .color-card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .color-swatch {
+      height: 80px;
+      width: 100%;
+    }
+    .color-card-body {
+      padding: 0.75rem;
+      background: #fff;
+    }
+    .color-name {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--lagoon);
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+    .color-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+    .color-hex {
+      font-family: 'Mulish', monospace;
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-weight: 600;
+    }
+    .color-usage {
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-top: 0.25rem;
+    }
+
+    /* Copy button */
+    .btn-copy {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 0.2rem 0.6rem;
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--lagoon);
+      background: var(--ash);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .btn-copy:hover {
+      background: var(--lagoon);
+      color: #fff;
+      border-color: var(--lagoon);
+    }
+    .btn-copy.copied {
+      background: #1a7a4a;
+      color: #fff;
+      border-color: #1a7a4a;
+    }
+
+    /* Typography specimens */
+    .type-specimen {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 1.5rem;
+      background: #fff;
+    }
+    .type-specimen-sample {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+      line-height: 1.1;
+      color: var(--lagoon);
+    }
+    .type-specimen-sample.is-display {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+    .type-specimen-sample.is-body {
+      font-family: 'Mulish', sans-serif;
+      font-weight: 400;
+      font-size: 1.25rem;
+      line-height: 1.6;
+    }
+    .type-specimen-sample.is-script {
+      font-family: 'Caveat', cursive;
+      font-weight: 400;
+      font-size: 2.25rem;
+    }
+    .type-meta {
+      border-top: 1px solid var(--line);
+      padding-top: 0.75rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.25rem 1rem;
+    }
+    .type-meta-item {
+      font-size: 0.8rem;
+    }
+    .type-meta-item strong {
+      font-weight: 700;
+      color: var(--lagoon);
+      display: block;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    .type-meta-item span {
+      color: var(--muted);
+    }
+
+    /* Asset download cards */
+    .asset-card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 1.5rem;
+      background: var(--ash);
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+    .asset-preview {
+      width: 80px;
+      height: 80px;
+      background: #fff;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.75rem;
+      flex-shrink: 0;
+    }
+    .asset-preview img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+    .asset-info {
+      flex: 1;
+    }
+    .asset-name {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--lagoon);
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+    .asset-desc {
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    /* Boilerplate copy blocks */
+    .copy-block {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fff;
+    }
+    .copy-block-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 1rem;
+      background: var(--ash);
+      border-bottom: 1px solid var(--line);
+    }
+    .copy-block-label {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 700;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--lagoon);
+    }
+    .copy-block-body {
+      padding: 1.25rem 1rem;
+      font-size: 0.95rem;
+      line-height: 1.65;
+      color: var(--lagoon);
+      margin: 0;
+    }
+
+    /* Do's and Don'ts */
+    .dos-donts-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    @media (max-width: 576px) {
+      .dos-donts-grid { grid-template-columns: 1fr; }
+      .color-grid { grid-template-columns: repeat(2, 1fr); }
+      .type-meta { grid-template-columns: 1fr; }
+    }
+    .dos-card, .donts-card {
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .dos-card-header, .donts-card-header {
+      padding: 0.6rem 1rem;
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 800;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    .dos-card-header {
+      background: #e6f4ec;
+      color: #1a5c35;
+    }
+    .donts-card-header {
+      background: #fdecea;
+      color: #8b1a11;
+    }
+    .dos-card ul, .donts-card ul {
+      list-style: none;
+      padding: 1rem;
+      margin: 0;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-top: none;
+      border-radius: 0 0 8px 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    .dos-card ul li, .donts-card ul li {
+      font-size: 0.88rem;
+      line-height: 1.45;
+      display: flex;
+      gap: 0.5rem;
+      color: var(--lagoon);
+    }
+    .dos-card ul li::before {
+      content: "yes";
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 800;
+      font-size: 0.65rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #1a7a4a;
+      background: #e6f4ec;
+      border-radius: 3px;
+      padding: 0.05rem 0.3rem;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+    .donts-card ul li::before {
+      content: "no";
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 800;
+      font-size: 0.65rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #8b1a11;
+      background: #fdecea;
+      border-radius: 3px;
+      padding: 0.05rem 0.3rem;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+
+    /* Page hero */
+    .brand-hero {
+      padding: 3.5rem 0 2.5rem;
+      border-bottom: 1px solid var(--line);
+      background: var(--ash);
+    }
+    .brand-hero h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.5rem;
+    }
+    .brand-hero p {
+      color: var(--muted);
+      max-width: 540px;
+      margin-bottom: 0;
+    }
+
+    /* Toc sidebar-style on large screens */
+    .brand-toc {
+      position: sticky;
+      top: 5rem;
+    }
+    .brand-toc-title {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 700;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--muted);
+      margin-bottom: 0.75rem;
+    }
+    .brand-toc ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      border-left: 2px solid var(--line);
+    }
+    .brand-toc ul li a {
+      display: block;
+      padding: 0.3rem 0.75rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .brand-toc ul li a:hover {
+      color: var(--lagoon);
+    }
+
+    /* Dark swatch needs light text on hex */
+    .color-card[data-dark="true"] .color-hex { color: rgba(0,0,0,0.45); }
+  </style>
+</head>
+<body>
+
+<!-- HEADER (canonical: _includes/header.html) -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <img src="/assets/img/favicon-splendid.svg" alt="" />
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Who we help</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/sales/">Sales</a></li>
+            <li><a class="dropdown-item" href="/marketing/">Marketing</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="/case-study/">Case study</a></li>
+        <li class="nav-item"><a class="nav-link" href="/about/">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="/writing/">Writing</a></li>
+        <li class="nav-item ms-lg-3"><a class="btn-se-primary" href="/contact/">Book a call</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+  <!-- HERO -->
+  <div class="brand-hero">
+    <div class="container">
+      <span class="brand-section-label">Press and design resources</span>
+      <h1>Brand Guidelines</h1>
+      <p>Colors, typography, logos, boilerplate copy, and voice guidelines. Everything you need to write about or design for Splendid Engines.</p>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="container py-5">
+    <div class="row">
+
+      <!-- TABLE OF CONTENTS -->
+      <div class="col-lg-2 d-none d-lg-block">
+        <nav class="brand-toc">
+          <p class="brand-toc-title">On this page</p>
+          <ul>
+            <li><a href="#colors">Colors</a></li>
+            <li><a href="#typography">Typography</a></li>
+            <li><a href="#logos">Logos</a></li>
+            <li><a href="#boilerplate">Boilerplate copy</a></li>
+            <li><a href="#voice">Brand voice</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- CONTENT -->
+      <div class="col-lg-10">
+
+        <!-- COLORS -->
+        <section class="brand-section" id="colors">
+          <span class="brand-section-label">Colors</span>
+          <h2>Color palette</h2>
+          <p class="section-desc">Eight colors make up the full palette. Lagoon is the primary dark. Poppy is the action color. Click any hex code to copy it.</p>
+
+          <div class="color-grid">
+
+            <div class="color-card">
+              <div class="color-swatch" style="background:#153047;"></div>
+              <div class="color-card-body">
+                <span class="color-name">Lagoon</span>
+                <div class="color-meta">
+                  <span class="color-hex">#153047</span>
+                  <button class="btn-copy" data-copy="#153047">Copy</button>
+                </div>
+                <div class="color-usage">Primary dark surface, body text</div>
+              </div>
+            </div>
+
+            <div class="color-card">
+              <div class="color-swatch" style="background:#DB4937;"></div>
+              <div class="color-card-body">
+                <span class="color-name">Poppy</span>
+                <div class="color-meta">
+                  <span class="color-hex">#DB4937</span>
+                  <button class="btn-copy" data-copy="#DB4937">Copy</button>
+                </div>
+                <div class="color-usage">CTAs, eyebrows, accents on dark</div>
+              </div>
+            </div>
+
+            <div class="color-card">
+              <div class="color-swatch" style="background:#377BDB;"></div>
+              <div class="color-card-body">
+                <span class="color-name">Lake</span>
+                <div class="color-meta">
+                  <span class="color-hex">#377BDB</span>
+                  <button class="btn-copy" data-copy="#377BDB">Copy</button>
+                </div>
+                <div class="color-usage">Links, secondary accent</div>
+              </div>
+            </div>
+
+            <div class="color-card">
+              <div class="color-swatch" style="background:#F2ED44; border-bottom: 1px solid var(--line);"></div>
+              <div class="color-card-body">
+                <span class="color-name">Daffodil</span>
+                <div class="color-meta">
+                  <span class="color-hex">#F2ED44</span>
+                  <button class="btn-copy" data-copy="#F2ED44">Copy</button>
+                </div>
+                <div class="color-usage">Text highlighter, stat units on dark</div>
+              </div>
+            </div>
+
+            <div class="color-card">
+              <div class="color-swatch" style="background:#575C45;"></div>
+              <div class="color-card-body">
+                <span class="color-name">Mate</span>
+                <div class="color-meta">
+                  <span class="color-hex">#575C45</span>
+                  <button class="btn-copy" data-copy="#575C45">Copy</button>
+                </div>
+                <div class="color-usage">Atmospheric panels, dividers</div>
+              </div>
+            </div>
+
+            <div class="color-card">
+              <div class="color-swatch" style="background:#FFFFFF; border-bottom: 1px solid var(--line);"></div>
+              <div class="color-card-body">
+                <span class="color-name">Snow</span>
+                <div class="color-meta">
+                  <span class="color-hex">#FFFFFF</span>
+                  <button class="btn-copy" data-copy="#FFFFFF">Copy</button>
+                </div>
+                <div class="color-usage">Primary light background</div>
+              </div>
+            </div>
+
+            <div class="color-card">
+              <div class="color-swatch" style="background:#EBF4F7;"></div>
+              <div class="color-card-body">
+                <span class="color-name">Ash</span>
+                <div class="color-meta">
+                  <span class="color-hex">#EBF4F7</span>
+                  <button class="btn-copy" data-copy="#EBF4F7">Copy</button>
+                </div>
+                <div class="color-usage">Secondary light, cards on Snow</div>
+              </div>
+            </div>
+
+            <div class="color-card">
+              <div class="color-swatch" style="background:#F4ECDF;"></div>
+              <div class="color-card-body">
+                <span class="color-name">Ash Warm</span>
+                <div class="color-meta">
+                  <span class="color-hex">#F4ECDF</span>
+                  <button class="btn-copy" data-copy="#F4ECDF">Copy</button>
+                </div>
+                <div class="color-usage">Warm light sections</div>
+              </div>
+            </div>
+
+          </div><!-- /color-grid -->
+        </section>
+
+        <!-- TYPOGRAPHY -->
+        <section class="brand-section" id="typography">
+          <span class="brand-section-label">Typography</span>
+          <h2>Fonts</h2>
+          <p class="section-desc">Three typefaces cover every use case. All three are available free from Google Fonts.</p>
+
+          <div class="row g-3">
+            <div class="col-md-4">
+              <div class="type-specimen">
+                <div class="type-specimen-sample is-display">Aa Bb Cc</div>
+                <div class="type-meta">
+                  <div class="type-meta-item">
+                    <strong>Name</strong>
+                    <span>Big Shoulders Display</span>
+                  </div>
+                  <div class="type-meta-item">
+                    <strong>Weights</strong>
+                    <span>700, 800</span>
+                  </div>
+                  <div class="type-meta-item">
+                    <strong>Use for</strong>
+                    <span>Headlines, nav, labels</span>
+                  </div>
+                  <div class="type-meta-item">
+                    <strong>Style</strong>
+                    <span>Uppercase always</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="type-specimen">
+                <div class="type-specimen-sample is-body">The quick brown fox.</div>
+                <div class="type-meta">
+                  <div class="type-meta-item">
+                    <strong>Name</strong>
+                    <span>Mulish</span>
+                  </div>
+                  <div class="type-meta-item">
+                    <strong>Weights</strong>
+                    <span>400, 500, 600, 700</span>
+                  </div>
+                  <div class="type-meta-item">
+                    <strong>Use for</strong>
+                    <span>Body copy, UI text</span>
+                  </div>
+                  <div class="type-meta-item">
+                    <strong>Style</strong>
+                    <span>Sentence case</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="type-specimen">
+                <div class="type-specimen-sample is-script">Nice day, isn't it?</div>
+                <div class="type-meta">
+                  <div class="type-meta-item">
+                    <strong>Name</strong>
+                    <span>Caveat</span>
+                  </div>
+                  <div class="type-meta-item">
+                    <strong>Weights</strong>
+                    <span>400, 500</span>
+                  </div>
+                  <div class="type-meta-item">
+                    <strong>Use for</strong>
+                    <span>Taglines, accent text</span>
+                  </div>
+                  <div class="type-meta-item">
+                    <strong>Style</strong>
+                    <span>Use sparingly</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p class="mt-3" style="font-size:0.82rem; color:var(--muted);">These are open-source substitutes. Licensed originals are Hanley Pro Slim Bold, Brandon Grotesque, and Hanley Monoline. Contact us if you need the licensed files.</p>
+        </section>
+
+        <!-- LOGOS -->
+        <section class="brand-section" id="logos">
+          <span class="brand-section-label">Logos and assets</span>
+          <h2>Logo files</h2>
+          <p class="section-desc">Use the SVG icon for small or single-color contexts. Use the full PNG logo when space allows. Do not alter colors, stretch, or add effects.</p>
+
+          <div class="row g-3">
+            <div class="col-md-6">
+              <div class="asset-card">
+                <div class="asset-preview" style="background:#153047;">
+                  <img src="/assets/img/logo-splendid.png" alt="Splendid Engines full logo" />
+                </div>
+                <div class="asset-info">
+                  <span class="asset-name">Full logo</span>
+                  <div class="asset-desc">Primary lockup. Use on light backgrounds. Minimum width: 120px.</div>
+                  <a href="/assets/img/logo-splendid.png" download class="btn-copy mt-2 d-inline-block" style="text-decoration:none;">Download PNG</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="asset-card">
+                <div class="asset-preview">
+                  <img src="/assets/img/favicon-splendid.svg" alt="Splendid Engines icon mark" />
+                </div>
+                <div class="asset-info">
+                  <span class="asset-name">Icon mark</span>
+                  <div class="asset-desc">Use for favicons, app icons, and tight spaces. Scales to any size.</div>
+                  <a href="/assets/img/favicon-splendid.svg" download class="btn-copy mt-2 d-inline-block" style="text-decoration:none;">Download SVG</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-3 p-3 rounded" style="background:var(--ash); border:1px solid var(--line); font-size:0.85rem; color:var(--muted);">
+            <strong style="color:var(--lagoon);">Logo rules:</strong> Never place the logo on a color other than Lagoon, Snow, or Ash. Maintain a clear space equal to the height of the "S" on all sides. Do not rotate, skew, recolor, or add drop shadows.
+          </div>
+        </section>
+
+        <!-- BOILERPLATE COPY -->
+        <section class="brand-section" id="boilerplate">
+          <span class="brand-section-label">Boilerplate copy</span>
+          <h2>Ready-to-use descriptions</h2>
+          <p class="section-desc">Three lengths for different contexts. Copy and use as-is. Do not paraphrase or alter the core claims.</p>
+
+          <div class="d-flex flex-column gap-3">
+
+            <div class="copy-block">
+              <div class="copy-block-header">
+                <span class="copy-block-label">One-liner (1 sentence)</span>
+                <button class="btn-copy" data-copy="Splendid Engines builds B2B community marketing programs that turn professional networks into pipeline.">Copy</button>
+              </div>
+              <p class="copy-block-body">Splendid Engines builds B2B community marketing programs that turn professional networks into pipeline.</p>
+            </div>
+
+            <div class="copy-block">
+              <div class="copy-block-header">
+                <span class="copy-block-label">Short bio (2-3 sentences)</span>
+                <button class="btn-copy" data-copy="Splendid Engines builds B2B community marketing programs that turn professional networks into pipeline. We put trusted industry voices at the center of our clients' go-to-market strategy - so buyers engage on their own terms, not because they were cold-called. Splendid works with B2B revenue teams in North America.">Copy</button>
+              </div>
+              <p class="copy-block-body">Splendid Engines builds B2B community marketing programs that turn professional networks into pipeline. We put trusted industry voices at the center of our clients' go-to-market strategy - so buyers engage on their own terms, not because they were cold-called. Splendid works with B2B revenue teams in North America.</p>
+            </div>
+
+            <div class="copy-block">
+              <div class="copy-block-header">
+                <span class="copy-block-label">Long bio (full paragraph)</span>
+                <button class="btn-copy" data-copy="Splendid Engines is a B2B community marketing firm that helps revenue teams build pipeline through peer influence rather than cold outreach. Founded on the insight that roughly 90% of B2B purchasing decisions are peer-influenced, Splendid builds programs that put customers' most trusted voices at the center of marketing. The approach replaces cold calls, gated content, and SDR armies with a system that meets buyers where they already learn - with people they already trust. Splendid serves B2B companies across North America, focusing on businesses with a $20K+ average contract value and LinkedIn-active buyers. Co-founders Evan F.P. and Brandon Gaulin bring combined experience from B2B GTM leadership, digital marketing strategy, and two successful company exits.">Copy</button>
+              </div>
+              <p class="copy-block-body">Splendid Engines is a B2B community marketing firm that helps revenue teams build pipeline through peer influence rather than cold outreach. Founded on the insight that roughly 90% of B2B purchasing decisions are peer-influenced, Splendid builds programs that put customers' most trusted voices at the center of marketing. The approach replaces cold calls, gated content, and SDR armies with a system that meets buyers where they already learn - with people they already trust. Splendid serves B2B companies across North America, focusing on businesses with a $20K+ average contract value and LinkedIn-active buyers. Co-founders Evan F.P. and Brandon Gaulin bring combined experience from B2B GTM leadership, digital marketing strategy, and two successful company exits.</p>
+            </div>
+
+            <div class="copy-block">
+              <div class="copy-block-header">
+                <span class="copy-block-label">Founders (short)</span>
+                <button class="btn-copy" data-copy="Evan F.P. co-founded Candor (acquired by Highwire in 2024) and spent the last decade running B2B GTM teams. Brandon Gaulin brings a background in team leadership and digital marketing strategy. Together they founded Splendid Engines to give revenue leaders a repeatable alternative to cold outreach and paid ads.">Copy</button>
+              </div>
+              <p class="copy-block-body">Evan F.P. co-founded Candor (acquired by Highwire in 2024) and spent the last decade running B2B GTM teams. Brandon Gaulin brings a background in team leadership and digital marketing strategy. Together they founded Splendid Engines to give revenue leaders a repeatable alternative to cold outreach and paid ads.</p>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- BRAND VOICE -->
+        <section class="brand-section" id="voice">
+          <span class="brand-section-label">Brand voice</span>
+          <h2>Do's and don'ts</h2>
+          <p class="section-desc">Splendid sounds like a senior operator talking to a peer - direct, honest, and a little dry. These rules keep writing on-brand.</p>
+
+          <div class="dos-donts-grid">
+
+            <div class="dos-card">
+              <div class="dos-card-header">Language: Do</div>
+              <ul>
+                <li>Write like you're talking to one smart person</li>
+                <li>Use short sentences. One idea per sentence.</li>
+                <li>Use "we" for the company, not "I"</li>
+                <li>Name the specific outcome: pipeline, revenue, deals</li>
+                <li>Qualify claims with data when you have it</li>
+                <li>Say "community marketing," not "influencer marketing"</li>
+                <li>Refer to buyers as "buyers" or "people," not "prospects"</li>
+                <li>Use active voice: "we build" not "programs are built"</li>
+              </ul>
+            </div>
+
+            <div class="donts-card">
+              <div class="donts-card-header">Language: Don't</div>
+              <ul>
+                <li>Use jargon: "synergy," "leverage," "unlock," "ecosystem"</li>
+                <li>Say "thought leader" or "thought leadership"</li>
+                <li>Use "AI-powered," "cutting-edge," or "next-gen"</li>
+                <li>Write in passive voice when active voice works</li>
+                <li>Use em dashes or en dashes - use a hyphen or colon</li>
+                <li>Stack adjectives before nouns ("robust, scalable solution")</li>
+                <li>Use exclamation marks in body copy</li>
+                <li>Describe Splendid as a "platform," "tool," or "software"</li>
+              </ul>
+            </div>
+
+            <div class="dos-card">
+              <div class="dos-card-header">Tone: Do</div>
+              <ul>
+                <li>Be direct. Say the thing.</li>
+                <li>Show confidence without being cocky</li>
+                <li>Be specific about what we do and don't do</li>
+                <li>Acknowledge trade-offs honestly</li>
+                <li>Write with a light, dry wit where it fits</li>
+                <li>Respect the reader's time in every sentence</li>
+              </ul>
+            </div>
+
+            <div class="donts-card">
+              <div class="donts-card-header">Tone: Don't</div>
+              <ul>
+                <li>Oversell or hype</li>
+                <li>Use corporate-speak to sound bigger</li>
+                <li>Be vague to avoid commitment</li>
+                <li>Sound like a press release</li>
+                <li>Punch down or take shots at competitors by name</li>
+                <li>Use rhetorical questions to replace real claims</li>
+              </ul>
+            </div>
+
+          </div>
+
+          <div class="mt-4 p-3 rounded" style="background:var(--ash); border:1px solid var(--line); font-size:0.85rem; color:var(--muted);">
+            <strong style="color:var(--lagoon);">Questions?</strong> Reach out via <a href="/contact/" style="color:var(--lake);">the contact page</a> and mention you're working on brand materials.
+          </div>
+        </section>
+
+      </div><!-- /col content -->
+    </div><!-- /row -->
+  </div><!-- /container -->
+
+</main>
+
+<!-- FOOTER (canonical: _includes/footer.html) -->
+<footer class="site-footer py-5">
+  <div class="container">
+    <div class="row align-items-center g-4">
+      <div class="col-md-4 text-center text-md-start">
+        <img src="/assets/img/logo-splendid.png" alt="Splendid Engines" class="footer-logo mb-2" />
+        <div>
+          <span class="footer-tagline-script">Nice day, isn't it?</span>
+        </div>
+      </div>
+      <div class="col-md-4 text-center">
+        <ul class="footer-nav">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/case-study/">Case study</a></li>
+          <li><a href="/writing/">Writing</a></li>
+          <li><a href="/contact/">Contact</a></li>
+          <li><a href="/our-brand/">Brand</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 text-center text-md-end footer-meta">
+        &copy; <span id="footer-year">2026</span> Splendid Engines. Operating in Canada and the USA.
+      </div>
+    </div>
+  </div>
+</footer>
+<script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+
+<script src="/assets/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/js/nav.js" defer></script>
+
+<script>
+  /* Copy-to-clipboard for all .btn-copy elements with data-copy attribute */
+  document.querySelectorAll('.btn-copy[data-copy]').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var text = btn.getAttribute('data-copy');
+      navigator.clipboard.writeText(text).then(function() {
+        var original = btn.textContent;
+        btn.textContent = 'Copied!';
+        btn.classList.add('copied');
+        setTimeout(function() {
+          btn.textContent = original;
+          btn.classList.remove('copied');
+        }, 1800);
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

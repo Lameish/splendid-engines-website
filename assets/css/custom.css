@@ -153,6 +153,7 @@ a:hover { color: var(--lagoon); }
   letter-spacing: 0.08em;
   padding: 0.75rem 1.5rem;
   border-radius: 999px;
+  text-decoration: none;
   transition: background-color .15s ease, border-color .15s ease, transform .15s ease;
 }
 .btn-se-primary:hover,
@@ -220,6 +221,32 @@ a:hover { color: var(--lagoon); }
   margin-right: auto;
   font-weight: 400;
   letter-spacing: 0;
+}
+.hero-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+  display: grid;
+  gap: 0.5rem;
+  text-align: left;
+}
+.hero-bullets li {
+  font-family: 'Mulish', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  padding-left: 1.5rem;
+  position: relative;
+  margin: 0;
+}
+.hero-bullets li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 0.5rem;
+  height: 0.5rem;
+  background: var(--poppy);
+  border-radius: 50%;
 }
 .hero-cta {
   display: flex;

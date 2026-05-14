@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Splendid Engines Iconography — v1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Mulish:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --lagoon: #153047;
+    --poppy: #DB4937;
+    --lake: #377BDB;
+    --daffodil: #F2ED44;
+    --mate: #575C45;
+    --snow: #FFFFFF;
+    --ash: #EBF4F7;
+    --ash-warm: #F4ECDF;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Mulish', sans-serif;
+    background: var(--snow);
+    color: var(--lagoon);
+    line-height: 1.6;
+    padding: 60px 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .eyebrow {
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: var(--poppy);
+    margin-bottom: 8px;
+  }
+  h1 {
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    font-size: 44px;
+    line-height: 1.05;
+    margin-bottom: 24px;
+  }
+  h2 {
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    font-size: 24px;
+    line-height: 1.05;
+    margin: 60px 0 8px;
+  }
+  h3 {
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 4px;
+  }
+  .group-label {
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-size: 11px;
+    color: var(--poppy);
+    margin-top: 40px;
+    margin-bottom: 12px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid var(--lagoon);
+  }
+  p, li { font-size: 16px; }
+  .lede {
+    font-size: 18px;
+    color: var(--lagoon);
+    opacity: 0.8;
+    max-width: 720px;
+    margin-bottom: 8px;
+  }
+  .meta { font-size: 13px; color: var(--mate); margin-top: 8px; }
+  .spec-band {
+    background: var(--ash);
+    padding: 20px 24px;
+    margin: 32px 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    font-size: 13px;
+  }
+  .spec-band strong {
+    display: block;
+    font-family: 'Big Shoulders Display', sans-serif;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--poppy);
+    font-size: 11px;
+    margin-bottom: 4px;
+  }
+  .icon-row {
+    border-bottom: 1px solid var(--ash);
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: 220px 1fr 1fr;
+    gap: 24px;
+    align-items: stretch;
+  }
+  .icon-info { display: flex; flex-direction: column; justify-content: center; }
+  .icon-info .map { font-size: 12px; color: var(--mate); margin-bottom: 6px; }
+  .icon-info .map .key {
+    font-family: 'Big Shoulders Display', sans-serif;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--poppy);
+    font-size: 10px;
+    margin-right: 4px;
+  }
+  .icon-info p { font-size: 13px; line-height: 1.5; }
+  .swatch {
+    padding: 16px;
+    display: flex;
+    gap: 28px;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  .swatch.light { background: var(--snow); border: 1px solid var(--ash); color: var(--lagoon); }
+  .swatch.dark { background: var(--lagoon); color: var(--snow); }
+  .swatch .size {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+  .swatch .size .label {
+    font-family: 'Big Shoulders Display', sans-serif;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-size: 10px;
+    opacity: 0.55;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+    font-size: 14px;
+  }
+  th, td {
+    text-align: left;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--ash);
+    vertical-align: top;
+  }
+  th {
+    font-family: 'Big Shoulders Display', sans-serif;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-size: 11px;
+    color: var(--poppy);
+    border-bottom: 2px solid var(--lagoon);
+  }
+  code {
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+    background: var(--ash);
+    padding: 2px 6px;
+  }
+  .footer {
+    margin-top: 80px;
+    padding-top: 24px;
+    border-top: 1px solid var(--ash);
+    font-size: 13px;
+    color: var(--mate);
+  }
+</style>
+</head>
+<body>
+
+<svg style="display: none" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="i-relationship" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="3.5" r="1.5" fill="currentColor" stroke="none"/><circle cx="20.5" cy="12" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="20.5" r="1.5" fill="currentColor" stroke="none"/><circle cx="3.5" cy="12" r="1.5" fill="currentColor" stroke="none"/><line x1="12" y1="9" x2="12" y2="5"/><line x1="15" y1="12" x2="19" y2="12"/><line x1="12" y1="15" x2="12" y2="19"/><line x1="9" y1="12" x2="5" y2="12"/></g></symbol>
+  <symbol id="i-signal" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter"><circle cx="12" cy="19" r="1.25" fill="currentColor" stroke="none"/><path d="M 8 15 A 4 4 0 0 1 16 15"/><path d="M 4 11 A 8 8 0 0 1 20 11"/></g></symbol>
+  <symbol id="i-engine" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2.5" x2="12" y2="5.5"/><line x1="12" y1="18.5" x2="12" y2="21.5"/><line x1="18.5" y1="12" x2="21.5" y2="12"/><line x1="2.5" y1="12" x2="5.5" y2="12"/><line x1="16.25" y1="7.75" x2="18.5" y2="5.5"/><line x1="16.25" y1="16.25" x2="18.5" y2="18.5"/><line x1="7.75" y1="16.25" x2="5.5" y2="18.5"/><line x1="7.75" y1="7.75" x2="5.5" y2="5.5"/></g></symbol>
+  <symbol id="i-conversation" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter"><path d="M 2 3 L 13 3 L 13 11 L 9 11 L 6 14 L 7 11 L 2 11 Z"/><path d="M 11 10 L 22 10 L 22 18 L 17 18 L 18 21 L 15 18 L 11 18 Z"/></g></symbol>
+  <symbol id="i-pipeline" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter"><polyline points="5,4 2,4 2,20 5,20"/><polyline points="7,7 11,12 7,17"/><polyline points="13,7 17,12 13,17"/><polyline points="19,4 22,4 22,20 19,20"/></g></symbol>
+  <symbol id="i-discovery" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter"><circle cx="10" cy="10" r="6"/><line x1="14.5" y1="14.5" x2="20" y2="20"/><line x1="7" y1="10" x2="13" y2="10"/><line x1="10" y1="7" x2="10" y2="13"/></g></symbol>
+  <symbol id="i-account" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter"><path d="M 5 3 L 19 3 L 19 22 L 14 22 L 14 17 L 10 17 L 10 22 L 5 22 Z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="14" x2="19" y2="14"/></g></symbol>
+  <symbol id="i-contact" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter"><circle cx="12" cy="7.5" r="3.5"/><path d="M 4 21 L 4 18 L 8 14 L 16 14 L 20 18 L 20 21"/></g></symbol>
+  <symbol id="i-campaign" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter"><line x1="5" y1="3" x2="5" y2="21"/><path d="M 5 4 L 19 8 L 5 12"/></g></symbol>
+  <symbol id="i-connection" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter"><circle cx="5.5" cy="12" r="2.5"/><circle cx="18.5" cy="12" r="2.5"/><line x1="8.5" y1="12" x2="15.5" y2="12"/></g></symbol>
+  <symbol id="i-client" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter"><path d="M 5 3 L 19 3 L 19 22 L 14 22 L 14 17 L 10 17 L 10 22 L 5 22 Z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="14" x2="19" y2="14"/><circle cx="12" cy="6" r="1.25" fill="currentColor" stroke="none"/></g></symbol>
+  <symbol id="i-operator" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter"><circle cx="12" cy="9" r="3.5"/><path d="M 4 22 L 4 19 L 8 15 L 16 15 L 20 19 L 20 22"/><circle cx="12" cy="9" r="1" fill="currentColor" stroke="none"/></g></symbol>
+  <symbol id="i-team-member" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter"><circle cx="12" cy="9" r="3.5"/><path d="M 4 22 L 4 19 L 8 15 L 16 15 L 20 19 L 20 22"/><circle cx="12" cy="3" r="1" fill="currentColor" stroke="none"/></g></symbol>
+  <symbol id="i-monitor" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><line x1="12" y1="12" x2="18.36" y2="5.64"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></g></symbol>
+  <symbol id="i-segment" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter"><rect x="3" y="8" width="18" height="8"/><line x1="9" y1="8" x2="9" y2="16"/><line x1="15" y1="8" x2="15" y2="16"/><rect x="10" y="10" width="4" height="4" fill="currentColor" stroke="none"/></g></symbol>
+  <symbol id="i-motion" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter"><line x1="5" y1="3" x2="5" y2="21"/><path d="M 5 4 L 19 6 L 5 8"/><path d="M 5 10 L 19 12 L 5 14"/></g></symbol>
+  <symbol id="i-enrollment" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter"><rect x="11" y="4" width="11" height="16"/><line x1="2" y1="12" x2="11" y2="12"/><polyline points="8,8 11,12 8,16"/></g></symbol>
+  <symbol id="i-offer" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter"><rect x="3" y="7" width="18" height="14"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="12" y1="7" x2="12" y2="21"/><polyline points="8,4 12,7 16,4"/></g></symbol>
+  <symbol id="i-conversion" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/></g></symbol>
+  <symbol id="i-campaign-event" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter"><circle cx="12" cy="12" r="9"/><line x1="12" y1="12" x2="12" y2="6"/><line x1="12" y1="12" x2="16.5" y2="12"/></g></symbol>
+  <symbol id="i-post" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter"><rect x="3" y="4" width="18" height="16"/><line x1="7" y1="9" x2="17" y2="9"/><line x1="7" y1="13" x2="17" y2="13"/><line x1="7" y1="17" x2="13" y2="17"/></g></symbol>
+  <symbol id="i-interaction" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter"><rect x="3" y="3" width="12" height="10"/><polyline points="11,11 21,21 18,21 11,14"/></g></symbol>
+  <symbol id="i-content-program" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter"><rect x="6" y="7" width="15" height="14"/><polyline points="3,18 3,4 17,4"/></g></symbol>
+  <symbol id="i-content-project" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter"><rect x="4" y="3" width="16" height="18"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="16" x2="14" y2="16"/></g></symbol>
+  <symbol id="i-industry-event" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter"><rect x="3" y="5" width="18" height="16"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="8" y1="3" x2="8" y2="7"/><line x1="16" y1="3" x2="16" y2="7"/><rect x="11" y="14" width="2" height="2" fill="currentColor" stroke="none"/></g></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter"><path d="M 6 3 L 14 3 L 19 8 L 19 21 L 6 21 Z"/><polyline points="14,3 14,8 19,8"/></g></symbol>
+  <symbol id="i-trust" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter"><path d="M 12 3 L 20 6 L 20 13 L 12 21 L 4 13 L 4 6 Z"/><polyline points="8,12 11,15 16,9"/></g></symbol>
+  <symbol id="i-growth" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter"><rect x="3" y="14" width="4" height="7"/><rect x="10" y="9" width="4" height="12"/><rect x="17" y="4" width="4" height="17"/></g></symbol>
+  <symbol id="i-arrow-right" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter"><line x1="3" y1="12" x2="19" y2="12"/><polyline points="14,7 19,12 14,17"/></g></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter"><polyline points="4,12 10,18 20,6"/></g></symbol>
+</svg>
+
+<div class="eyebrow">Iconography</div>
+<h1>Splendid Engines Icons<br>v1 · Full Library</h1>
+<p class="lede">Thirty icons covering every domain-model object plus the marketing vocabulary the homepage and deck need. One language across product UI, marketing, and decks: 2.5px stroke, square caps, miter joins, no fills outside endpoint dots. Built from four archetype shapes (company, person, process, link) plus six concept primitives carried forward from the v1 mockup set.</p>
+<p class="meta">v1.0 · 2026-05-13 · Fonts shown are Google substitutes (Big Shoulders Display for Hanley Pro, Mulish for Brandon Grotesque). Production must use the licensed faces.</p>
+
+<div class="spec-band">
+  <div><strong>Stroke</strong>2.5px @ 24px viewBox</div>
+  <div><strong>Caps</strong>Square</div>
+  <div><strong>Joins</strong>Miter</div>
+  <div><strong>Fill</strong>None, except endpoint dots</div>
+</div>
+
+<h2>The Set</h2>
+
+<div class="group-label">Core marketing primitives (refined v1 set)</div>
+
+<div class="icon-row">
+  <div class="icon-info"><h3>Relationship</h3><div class="map"><span class="key">Maps to</span> Relationship · Network</div><p>Hub with four orbiting nodes. Anchor for Moat #1 visuals and the relationship graph.</p></div>
+  <div class="swatch light"><div class="size"><svg width="24" height="24"><use href="#i-relationship"/></svg><div class="label">24</div></div><div class="size"><svg width="48" height="48"><use href="#i-relationship"/></svg><div class="label">48</div></div><div class="size"><svg width="72" height="72"><use href="#i-relationship"/></svg><div class="label">72</div></div></div>
+  <div class="swatch dark"><div class="size"><svg width="24" height="24"><use href="#i-relationship"/></svg><div class="label">24</div></div><div class="size"><svg width="48" height="48"><use href="#i-relationship"/></svg><div class="label">48</div></div><div class="size"><svg width="72" height="72"><use href="#i-relationship"/></svg><div class="label">72</div></div></div>
+</div>
+
+<div class="icon-row">
+  <div class="icon-info"><h3>Signal</h3><div class="map"><span class="key">Maps to</span> Signal · LI Activity</div><p>Concentric arcs from a base dot. Use for signal monitoring, intent data, anything a contact emits.</p></div>
+  <div class="swatch light"><div class="size"><svg width="24" height="24"><use href="#i-signal"/></svg><div class="label">24</div></div><div class="size"><svg width="48" height="48"><use href="#i-signal"/></svg><div class="label">48</div></div><div class="size"><svg width="72" height="72"><use href="#i-signal"/></svg><div class="label">72</div></div></div>
+  <div class="swatch dark"><div class="size"><svg width="24" height="24"><use href="#i-signal"/></svg><div class="label">24</div></div><div class="size"><svg width="48" height="48"><use href="#i-signal"/></svg><div class="label">48</div></div><div class="size"><svg width="72" height="72"><use href="#i-signal"/></svg><div class="label">72</div></div></div>
+</div>
+
+<div class="icon-row">
+  <div class="icon-info"><h3>Engine</h3><div class="map"><span class="key">Maps to</span> Methodology · the Engine</div><p>Hub with eight spokes. The mechanical anchor for any reference to the system itself.</p></div>
+  <div class="swatch light"><div class="size"><svg width="24" height="24"><use href="#i-engine"/></svg><div class="label">24</div></div><div class="size"><svg width="48" height="48"><use href="#i-engine"/></svg><div class="label">48</div></div><div class="size"><svg width="72" height="72"><use href="#i-engine"/></svg><div class="label">72</div></div></div>
+  <div class="swatch dark"><div class="size"><svg width="24" height="24"><use href="#i-engine"/></svg><div class="label">24</div></div><div class="size"><svg width="48" height="48"><use href="#i-engine"/></svg><div class="label">48</div></div><div class="size"><svg width="72" height="72"><use href="#i-engine"/></svg><div class="label">72</div></div></div>
+</div>
+
+<div class="icon-row">
+  <div class="icon-info"><h3>Conversation</h3><div class="map"><span class="key">Maps to</span> Founder LinkedIn conversations</div><p>Two rectangular speech bubbles with sharp triangular tails. Engine-register, no rounded corners.</p></div>
+  <div class="swatch light"><div class="size"><svg width="24" height="24"><use href="#i-conversation"/></svg><div class="label">24</div></div><div class="size"><svg width="48" height="48"><use href="#i-conversation"/></svg><div class="label">48</div></div><div class="size"><svg width="72" height="72"><use href="#i-conversation"/></svg><div class="label">72</div></div></div>
+  <div class="swatch dark"><div class="size"><svg width="24" height="24"><use href="#i-conversation"/></svg><div class="label">24</div></div><div class="size"><svg width="48" height="48"><use href="#i-conversation"/></svg><div class="label">48</div></div><div class="size"><svg width="72" height="72"><use href="#i-conversation"/></svg><div class="label">72</div></div></div>
+</div>
+
+<div class="icon-row">
+  <div class="icon-info"><h3>Pipeline</h3><div class="map"><span class="key">Maps to</span> Marketing concept · pipeline</div><p>Brackets enclose chevrons of forward motion. Bounded directional flow.</p></div>
+  <div class="swatch light"><div class="size"><svg width="24" height="24"><use href="#i-pipeline"/></svg><div class="label">24</div></div><div class="size"><svg width="48" height="48"><use href="#i-pipeline"/></svg><div class="label">48</div></div><div class="size"><svg width="72" height="72"><use href="#i-pipeline"/></svg><div class="label">72</div></div></div>
+  <div class="swatch dark"><div class="size"><svg width="24" height="24"><use href="#i-pipeline"/></svg><div class="label">24</div></div><div class="size"><svg width="48" height="48"><use href="#i-pipeline"/></svg><div class="label">48</div></div><div class="size"><svg width="72" height="72"><use href="#i-pipeline"/></svg><div class="label">72</div></div></div>
+</div>
+
+<div class="icon-row">
+  <div class="icon-info"><h3>Discovery</h3><div class="map"><span class="key">Maps to</span> Marketing concept · discovery</div><p>Magnifier with crosshair lens. Use for search, research, finding the right people.</p></div>
+  <div class="swatch light"><div class="size"><svg width="24" height="24"><use href="#i-discovery"/></svg><div class="label">24</div></div><div class="size"><svg width="48" height="48"><use href="#i-discovery"/></svg><div class="label">48</div></div><div class="size"><svg width="72" height="72"><use href="#i-discovery"/></svg><div class="label">72</div></div></div>
+  <div class="swatch dark"><div class="size"><svg width="24" height="24"><use href="#i-discovery"/></svg><div class="label">24</div></div><div class="size"><svg width="48" height="48"><use href="#i-discovery"/></svg><div class="label">48</div></div><div class="size"><svg width="72" height="72"><use href="#i-discovery"/></svg><div class="label">72</div></div></div>
+</div>
+
+<div class="group-label">People (the person archetype)</div>
+
+<div class="icon-row">
+  <div class="icon-info"><h3>Contact</h3><div class="map"><span class="key">Maps to</span> Contact (domain)</div><p>Head and trapezoidal shoulders. The base person shape.</p></div>
+  <div class="swatch light"><div class="size"><svg width="24" height="24"><use href="#i-contact"/></svg><div class="label">24</div></div><div class="size"><svg width="48" height="48"><use href="#i-contact"/></svg><div class="label">48</div></div><div class="size"><svg width="72" height="72"><use href="#i-contact"/></svg><div class="label">72</div></div></div>
+  <div class="swatch dark"><div class="size"><svg width="24" height="24"><use href="#i-contact"/></svg><div class="label">24</div></div><div class="size"><svg width="48" height="48"><use href="#i-contact"/></svg><div class="label">48</div></div><div class="size"><svg width="72" height="72"><use href="#i-contact"/></svg><div class="label">72</div></div></div>
+</div>
+
+<div class="icon-row">
+  <div class="icon-info"><h3>Operator</h3><div class="map"><span class="key">Maps to</span> Operator (domain)</div><p>Person with filled focal dot in the head. The "at the console" mark for Splendid operators.</p></div>
+  <div class="swatch light"><div class="size"><svg width="24" height="24"><use href="#i-operator"/></svg><div class="label">24</div></div><div class="size"><svg width="48" height="48"><use href="#i-operator"/></svg><div class="label">48</div></div><div class="size"><svg width="72" height="72"><use href="#i-operator"/></svg><div class="label">72</div></div></div>
+  <div class="swatch dark"><div class="size"><svg width="24" height="24"><use href="#i-operator"/></svg><div class="label">24</div></div><div class="size"><svg width="48" height="48"><use href="#i-operator"/></svg><div class="label">48</div></div><div class="size"><svg width="72" height="72"><use href="#i-operator"/></svg><div class="label">72</div></div></div>
+</div>
+
+<div class="icon-row">
+  <div class="icon-info"><h3>Team Member</h3><div class="map"><span class="key">Maps to</span> Team Member (domain)</div><p>Person with marker dot above the head. The "voice we operate" mark for client-side team members.</p></div>
+  <div class="swatch light"><div class="size"><svg width="24" height="24"><use href="#i-team-member"/></svg><div class="label">24</div></div><div class="size"><svg width="48" height="48"><use href="#i-team-member"/></svg><div class="label">48</div></div><div class="size"><svg width="72" height="72"><use href="#i-team-member"/></svg><div class="label">72</div></div></div>
+  <div class="swatch dark"><div class="size"><svg width="24" height="24"><use href="#i-team-member"/></svg><div class="label">24</div></div><div class="size"><svg width="48" height="48"><use href="#i-team-member"/></svg><div class="label">48</div></div><div class="size"><svg width="72" height="72"><use href="#i-team-member"/></svg><div class="label">72</div></div></div>
+</div>
+
+<div class="group-label">Companies (the building archetype)</div>
+
+<div class="icon-row">
+  <div class="icon-info"><h3>Account</h3><div class="map"><span class="key">Maps to</span> Account (domain)</div><p>Three-story building outline with doorway cut at the base. The base company shape.</p></div>
+  <div class="swatch light"><div class="size"><svg width="24" height="24"><use href="#i-account"/></svg><div class="label">24</div></div><div class="size"><svg width="48" height="48"><use href="#i-account"/></svg><div class="label">48</div></div><div class="size"><svg width="72" height="72"><use href="#i-account"/></svg><div class="label">72</div></div></div>
+  <div class="swatch dark"><div class="size"><svg width="24" height="24"><use href="#i-account"/></svg><div class="label">24</div></div><div class="size"><svg width="48" height="48"><use href="#i-account"/></svg><div class="label">48</div></div><div class="size"><svg width="72" height="72"><use href="#i-account"/></svg><div class="label">72</div></div></div>
+</div>
+
+<div class="icon-row">
+  <div class="icon-info"><h3>Client</h3><div class="map"><span class="key">Maps to</span> Client (domain)</div><p>Building with a logo dot on the top floor. The "company we work with" mark.</p></div>
+  <div class="swatch light"><div class="size"><svg width="24" height="24"><use href="#i-client"/></svg><div class="label">24</div></div><div class="size"><svg width="48" height="48"><use href="#i-client"/></svg><div class="label">48</div></div><div class="size"><svg width="72" height="72"><use href="#i-client"/></svg><div class="label">72</div></div></div>
+  <div class="swatch dark"><div class="size"><svg width="24" height="24"><use href="#i-client"/></svg><div class="label">24</div></div><div class="size"><svg width="48" height="48"><use href="#i-client"/></svg><div class="label">48</div></div><div class="size"><svg width="72" height="72"><use href="#i-client"/></svg><div class="label">72</div></div></div>
+</div>
+
+<div class="group-label">Outreach mechanics</div>
+
+<div class="icon-row">
+  <div class="icon-info"><h3>Campaign</h3><div class="map"><span class="key">Maps to</span> Campaign (domain)</div><p>Single flag on a pole. The executable unit inside a Motion.</p></div>
+  <div class="swatch light"><div class="size"><svg width="24" height="24"><use href="#i-campaign"/></svg><div class="label">24</div></div><div class="size"><svg width="48" height="48"><use href="#i-campaign"/></svg><div class="label">48</div></div><div class="size"><svg width="72" height="72"><use href="#i-campaign"/></svg><div class="label">72</div></div></div>
+  <div class="swatch dark"><div class="size"><svg width="24" height="24"><use href="#i-campaign"/></svg><div class="label">24</div></div><div class="size"><svg width="48" height="48"><use href="#i-campaign"/></svg><div class="label">48</div></div><div class="size"><svg width="72" height="72"><use href="#i-campaign"/></svg><div class="label">72</div></div></div>
+</div>
+
+<div class="icon-row">
+  <div class="icon-info"><h3>Motion</h3><div class="map"><span class="key">Maps to</span> Motion (domain)</div><p>Two flags stacked on one pole. The strategic umbrella above multiple campaigns.</p></div>
+  <div class="swatch light"><div class="size"><svg width="24" height="24"><use href="#i-motion"/></svg><div class="label">24</div></div><div class="size"><svg width="48" height="48"><use href="#i-motion"/></svg><div class="label">48</div></div><div class="size"><svg width="72" height="72"><use href="#i-motion"/></svg><div class="label">72</div></div></div>
+  <div class="swatch dark"><div class="size"><svg width="24" height="24"><use href="#i-motion"/></svg><div class="label">24</div></div><div class="size"><svg width="48" height="48"><use href="#i-motion"/></svg><div class="label">48</div></div><div class="size"><svg width="72" height="72"><use href="#i-motion"/></svg><div class="label">72</div></div></div>
+</div>
+
+<div class="icon-row">
+  <div class="icon-info"><h3>Enrollment</h3><div class="map"><span class="key">Maps to</span> Enrollment (domain)</div><p>Arrow entering a container. One Contact placed into one Campaign.</p></div>
+  <div class="swatch light"><div class="size"><svg width="24" height="24"><use href="#i-enrollment"/></svg><div class="label">24</div></div><div class="size"><svg width="48" height="48"><use href="#i-enrollment"/></svg><div class="label">48</div></div><div class="size"><svg width="72" height="72"><use href="#i-enrollment"/></svg><div class="label">72</div></div></div>
+  <div class="swatch dark"><div class="size"><svg width="24" height="24"><use href="#i-enrollment"/></svg><div class="label">24</div></div><div class="size"><svg width="48" height="48"><use href="#i-enrollment"/></svg><div class="label">48</div></div><div class="size"><svg width="72" height="72"><use href="#i-enrollment"/></svg><div class="label">72</div></div></div>
+</div>
+
+<div class="icon-row">
+  <div class="icon-info"><h3>Offer</h3><div class="map"><span class="key">Maps to</span> Offer (domain)</div><p>Wrapped package with bow. What is being proffered.</p></div>
+  <div class="swatch light"><div class="size"><svg width="24" height="24"><use href="#i-offer"/></svg><div class="label">24</div></div><div class="size"><svg width="48" height="48"><use href="#i-offer"/></svg><div class="label">48</div></div><div class="size"><svg width="72" height="72"><use href="#i-offer"/></svg><div class="label">72</div></div></div>
+  <div class="swatch dark"><div class="size"><svg width="24" height="24"><use href="#i-offer"/></svg><div class="label">24</div></div><div class="size"><svg width="48" height="48"><use href="#i-offer"/></svg><div class="label">48</div></div><div class="size"><svg width="72" height="72"><use href="#i-offer"/></svg><div class="label">72</div></div></div>
+</div>
+
+<div class="icon-row">
+  <div class="icon-info"><h3>Conversion</h3><div class="map"><span class="key">Maps to</span> Conversion (domain)</div><p>Concentric target rings with bullseye. The committed action.</p></div>
+  <div class="swatch light"><div class="size"><svg width="24" height="24"><use href="#i-conversion"/></svg><div class="label">24</div></div><div class="size"><svg width="48" height="48"><use href="#i-conversion"/></svg><div class="label">48</div></div><div class="size"><svg width="72" height="72"><use href="#i-conversion"/></svg><div class="label">72</div></div></div>
+  <div class="swatch dark"><div class="size"><svg width="24" height="24"><use href="#i-conversion"/></svg><div class="label">24</div></div><div class="size"><svg width="48" height="48"><use href="#i-conversion"/></svg><div class="label">48</div></div><div class="size"><svg width="72" height="72"><use href="#i-conversion"/></svg><div class="label">72</div></div></div>
+</div>
+
+<div class="icon-row">
+  <div class="icon-info"><h3>Campaign Event</h3><div class="map"><span class="key">Maps to</span> Campaign Event (domain)</div><p>Clock face. Append-only webhook log entry, time-stamped.</p></div>
+  <div class="swatch light"><div class="size"><svg width="24" height="24"><use href="#i-campaign-event"/></svg><div class="label">24</div></div><div class="size"><svg width="48" height="48"><use href="#i-campaign-event"/></svg><div class="label">48</div></div><div class="size"><svg width="72" height="72"><use href="#i-campaign-event"/></svg><div class="label">72</div></div></div>
+  <div class="swatch dark"><div class="size"><svg width="24" height="24"><use href="#i-campaign-event"/></svg><div class="label">24</div></div><div class="size"><svg width="48" height="48"><use href="#i-campaign-event"/></svg><div class="label">48</div></div><div class="size"><svg width="72" height="72"><use href="#i-campaign-event"/></svg><div class="label">72</div></div></div>
+</div>
+
+<div class="group-label">Activity and signals</div>
+
+<div class="icon-row">
+  <div class="icon-info"><h3>Post</h3><div class="map"><span class="key">Maps to</span> Post (domain)</div><p>Rectangle with three text lines. A LinkedIn post by a Client or Team Member.</p></div>
+  <div class="swatch light"><div class="size"><svg width="24" height="24"><use href="#i-post"/></svg><div class="label">24</div></div><div class="size"><svg width="48" height="48"><use href="#i-post"/></svg><div class="label">48</div></div><div class="size"><svg width="72" height="72"><use href="#i-post"/></svg><div class="label">72</div></div></div>
+  <div class="swatch dark"><div class="size"><svg width="24" height="24"><use href="#i-post"/></svg><div class="label">24</div></div><div class="size"><svg width="48" height="48"><use href="#i-post"/></svg><div class="label">48</div></div><div class="size"><svg width="72" height="72"><use href="#i-post"/></svg><div class="label">72</div></div></div>
+</div>
+
+<div class="icon-row">
+  <div class="icon-info"><h3>Interaction</h3><div class="map"><span class="key">Maps to</span> Interaction (domain)</div><p>Cursor on content. Someone clicking, liking, or commenting on a Post.</p></div>
+  <div class="swatch light"><div class="size"><svg width="24" height="24"><use href="#i-interaction"/></svg><div class="label">24</div></div><div class="size"><svg width="48" height="48"><use href="#i-interaction"/></svg><div class="label">48</div></div><div class="size"><svg width="72" height="72"><use href="#i-interaction"/></svg><div class="label">72</div></div></div>
+  <div class="swatch dark"><div class="size"><svg width="24" height="24"><use href="#i-interaction"/></svg><div class="label">24</div></div><div class="size"><svg width="48" height="48"><use href="#i-interaction"/></svg><div class="label">48</div></div><div class="size"><svg width="72" height="72"><use href="#i-interaction"/></svg><div class="label">72</div></div></div>
+</div>
+
+<div class="group-label">Target side: discovery and filtering</div>
+
+<div class="icon-row">
+  <div class="icon-info"><h3>Monitor</h3><div class="map"><span class="key">Maps to</span> Monitor (domain)</div><p>Radar scope with sweep line. Live Clay query continuously pulling entities.</p></div>
+  <div class="swatch light"><div class="size"><svg width="24" height="24"><use href="#i-monitor"/></svg><div class="label">24</div></div><div class="size"><svg width="48" height="48"><use href="#i-monitor"/></svg><div class="label">48</div></div><div class="size"><svg width="72" height="72"><use href="#i-monitor"/></svg><div class="label">72</div></div></div>
+  <div class="swatch dark"><div class="size"><svg width="24" height="24"><use href="#i-monitor"/></svg><div class="label">24</div></div><div class="size"><svg width="48" height="48"><use href="#i-monitor"/></svg><div class="label">48</div></div><div class="size"><svg width="72" height="72"><use href="#i-monitor"/></svg><div class="label">72</div></div></div>
+</div>
+
+<div class="icon-row">
+  <div class="icon-info"><h3>Segment</h3><div class="map"><span class="key">Maps to</span> Segment (domain)</div><p>Three-section bar with middle slice filled. The filtered subset of a Monitor.</p></div>
+  <div class="swatch light"><div class="size"><svg width="24" height="24"><use href="#i-segment"/></svg><div class="label">24</div></div><div class="size"><svg width="48" height="48"><use href="#i-segment"/></svg><div class="label">48</div></div><div class="size"><svg width="72" height="72"><use href="#i-segment"/></svg><div class="label">72</div></div></div>
+  <div class="swatch dark"><div class="size"><svg width="24" height="24"><use href="#i-segment"/></svg><div class="label">24</div></div><div class="size"><svg width="48" height="48"><use href="#i-segment"/></svg><div class="label">48</div></div><div class="size"><svg width="72" height="72"><use href="#i-segment"/></svg><div class="label">72</div></div></div>
+</div>
+
+<div class="group-label">Relationship graph</div>
+
+<div class="icon-row">
+  <div class="icon-info"><h3>Connection</h3><div class="map"><span class="key">Maps to</span> Connection (domain)</div><p>Two equal nodes joined by a line. Symmetric 1:1 link. Differentiates from Relationship by not having a hub.</p></div>
+  <div class="swatch light"><div class="size"><svg width="24" height="24"><use href="#i-connection"/></svg><div class="label">24</div></div><div class="size"><svg width="48" height="48"><use href="#i-connection"/></svg><div class="label">48</div></div><div class="size"><svg width="72" height="72"><use href="#i-connection"/></svg><div class="label">72</div></div></div>
+  <div class="swatch dark"><div class="size"><svg width="24" height="24"><use href="#i-connection"/></svg><div class="label">24</div></div><div class="size"><svg width="48" height="48"><use href="#i-connection"/></svg><div class="label">48</div></div><div class="size"><svg width="72" height="72"><use href="#i-connection"/></svg><div class="label">72</div></div></div>
+</div>
+
+<div class="group-label">Content engine</div>
+
+<div class="icon-row">
+  <div class="icon-info"><h3>Content Program</h3><div class="map"><span class="key">Maps to</span> Content Program (domain)</div><p>Stack of two rectangles. The branded series (e.g., "Just One Thing"). A collection of projects.</p></div>
+  <div class="swatch light"><div class="size"><svg width="24" height="24"><use href="#i-content-program"/></svg><div class="label">24</div></div><div class="size"><svg width="48" height="48"><use href="#i-content-program"/></svg><div class="label">48</div></div><div class="size"><svg width="72" height="72"><use href="#i-content-program"/></svg><div class="label">72</div></div></div>
+  <div class="swatch dark"><div class="size"><svg width="24" height="24"><use href="#i-content-program"/></svg><div class="label">24</div></div><div class="size"><svg width="48" height="48"><use href="#i-content-program"/></svg><div class="label">48</div></div><div class="size"><svg width="72" height="72"><use href="#i-content-program"/></svg><div class="label">72</div></div></div>
+</div>
+
+<div class="icon-row">
+  <div class="icon-info"><h3>Content Project</h3><div class="map"><span class="key">Maps to</span> Content Project (domain)</div><p>Document with three text lines inside. The individual asset (interview, report, blog post).</p></div>
+  <div class="swatch light"><div class="size"><svg width="24" height="24"><use href="#i-content-project"/></svg><div class="label">24</div></div><div class="size"><svg width="48" height="48"><use href="#i-content-project"/></svg><div class="label">48</div></div><div class="size"><svg width="72" height="72"><use href="#i-content-project"/></svg><div class="label">72</div></div></div>
+  <div class="swatch dark"><div class="size"><svg width="24" height="24"><use href="#i-content-project"/></svg><div class="label">24</div></div><div class="size"><svg width="48" height="48"><use href="#i-content-project"/></svg><div class="label">48</div></div><div class="size"><svg width="72" height="72"><use href="#i-content-project"/></svg><div class="label">72</div></div></div>
+</div>
+
+<div class="group-label">Cross-cutting</div>
+
+<div class="icon-row">
+  <div class="icon-info"><h3>Industry Event</h3><div class="map"><span class="key">Maps to</span> Industry Event (domain)</div><p>Calendar with date marker. B2B conference, summit, community gathering.</p></div>
+  <div class="swatch light"><div class="size"><svg width="24" height="24"><use href="#i-industry-event"/></svg><div class="label">24</div></div><div class="size"><svg width="48" height="48"><use href="#i-industry-event"/></svg><div class="label">48</div></div><div class="size"><svg width="72" height="72"><use href="#i-industry-event"/></svg><div class="label">72</div></div></div>
+  <div class="swatch dark"><div class="size"><svg width="24" height="24"><use href="#i-industry-event"/></svg><div class="label">24</div></div><div class="size"><svg width="48" height="48"><use href="#i-industry-event"/></svg><div class="label">48</div></div><div class="size"><svg width="72" height="72"><use href="#i-industry-event"/></svg><div class="label">72</div></div></div>
+</div>
+
+<div class="icon-row">
+  <div class="icon-info"><h3>File</h3><div class="map"><span class="key">Maps to</span> File (domain)</div><p>Document with folded corner. Generic attachment storage.</p></div>
+  <div class="swatch light"><div class="size"><svg width="24" height="24"><use href="#i-file"/></svg><div class="label">24</div></div><div class="size"><svg width="48" height="48"><use href="#i-file"/></svg><div class="label">48</div></div><div class="size"><svg width="72" height="72"><use href="#i-file"/></svg><div class="label">72</div></div></div>
+  <div class="swatch dark"><div class="size"><svg width="24" height="24"><use href="#i-file"/></svg><div class="label">24</div></div><div class="size"><svg width="48" height="48"><use href="#i-file"/></svg><div class="label">48</div></div><div class="size"><svg width="72" height="72"><use href="#i-file"/></svg><div class="label">72</div></div></div>
+</div>
+
+<div class="group-label">Marketing extras</div>
+
+<div class="icon-row">
+  <div class="icon-info"><h3>Trust</h3><div class="map"><span class="key">Maps to</span> Marketing concept · trust</div><p>Shield with checkmark. Earned credibility, verification.</p></div>
+  <div class="swatch light"><div class="size"><svg width="24" height="24"><use href="#i-trust"/></svg><div class="label">24</div></div><div class="size"><svg width="48" height="48"><use href="#i-trust"/></svg><div class="label">48</div></div><div class="size"><svg width="72" height="72"><use href="#i-trust"/></svg><div class="label">72</div></div></div>
+  <div class="swatch dark"><div class="size"><svg width="24" height="24"><use href="#i-trust"/></svg><div class="label">24</div></div><div class="size"><svg width="48" height="48"><use href="#i-trust"/></svg><div class="label">48</div></div><div class="size"><svg width="72" height="72"><use href="#i-trust"/></svg><div class="label">72</div></div></div>
+</div>
+
+<div class="icon-row">
+  <div class="icon-info"><h3>Growth</h3><div class="map"><span class="key">Maps to</span> Marketing concept · growth</div><p>Three ascending bars. Climbing metrics, pipeline acceleration.</p></div>
+  <div class="swatch light"><div class="size"><svg width="24" height="24"><use href="#i-growth"/></svg><div class="label">24</div></div><div class="size"><svg width="48" height="48"><use href="#i-growth"/></svg><div class="label">48</div></div><div class="size"><svg width="72" height="72"><use href="#i-growth"/></svg><div class="label">72</div></div></div>
+  <div class="swatch dark"><div class="size"><svg width="24" height="24"><use href="#i-growth"/></svg><div class="label">24</div></div><div class="size"><svg width="48" height="48"><use href="#i-growth"/></svg><div class="label">48</div></div><div class="size"><svg width="72" height="72"><use href="#i-growth"/></svg><div class="label">72</div></div></div>
+</div>
+
+<div class="group-label">UI primitives</div>
+
+<div class="icon-row">
+  <div class="icon-info"><h3>Arrow Right</h3><div class="map"><span class="key">Maps to</span> UI · forward</div><p>Horizontal line with chevron tip. Buttons, next steps, in-text navigation.</p></div>
+  <div class="swatch light"><div class="size"><svg width="24" height="24"><use href="#i-arrow-right"/></svg><div class="label">24</div></div><div class="size"><svg width="48" height="48"><use href="#i-arrow-right"/></svg><div class="label">48</div></div><div class="size"><svg width="72" height="72"><use href="#i-arrow-right"/></svg><div class="label">72</div></div></div>
+  <div class="swatch dark"><div class="size"><svg width="24" height="24"><use href="#i-arrow-right"/></svg><div class="label">24</div></div><div class="size"><svg width="48" height="48"><use href="#i-arrow-right"/></svg><div class="label">48</div></div><div class="size"><svg width="72" height="72"><use href="#i-arrow-right"/></svg><div class="label">72</div></div></div>
+</div>
+
+<div class="icon-row">
+  <div class="icon-info"><h3>Check</h3><div class="map"><span class="key">Maps to</span> UI · confirm</div><p>Two-stroke checkmark. List items, confirmations, "yes" states.</p></div>
+  <div class="swatch light"><div class="size"><svg width="24" height="24"><use href="#i-check"/></svg><div class="label">24</div></div><div class="size"><svg width="48" height="48"><use href="#i-check"/></svg><div class="label">48</div></div><div class="size"><svg width="72" height="72"><use href="#i-check"/></svg><div class="label">72</div></div></div>
+  <div class="swatch dark"><div class="size"><svg width="24" height="24"><use href="#i-check"/></svg><div class="label">24</div></div><div class="size"><svg width="48" height="48"><use href="#i-check"/></svg><div class="label">48</div></div><div class="size"><svg width="72" height="72"><use href="#i-check"/></svg><div class="label">72</div></div></div>
+</div>
+
+<h2>Domain Model Coverage</h2>
+<table>
+  <thead><tr><th>Domain object</th><th>Icon</th><th>Notes</th></tr></thead>
+  <tbody>
+    <tr><td>Client</td><td>Client</td><td>Account + filled logo dot inside the top floor</td></tr>
+    <tr><td>Operator</td><td>Operator</td><td>Contact + filled dot inside head</td></tr>
+    <tr><td>Team Member</td><td>Team Member</td><td>Contact + filled dot above head</td></tr>
+    <tr><td>Account</td><td>Account</td><td>Base building shape</td></tr>
+    <tr><td>Contact</td><td>Contact</td><td>Base person shape</td></tr>
+    <tr><td>Monitor</td><td>Monitor</td><td>Radar scope, distinct from Discovery (search) by being continuous</td></tr>
+    <tr><td>Segment</td><td>Segment</td><td>Subdivided bar with middle slice filled</td></tr>
+    <tr><td>Motion</td><td>Motion</td><td>Two flags, distinguishing from single-flag Campaign</td></tr>
+    <tr><td>Campaign</td><td>Campaign</td><td>Single flag</td></tr>
+    <tr><td>Enrollment</td><td>Enrollment</td><td>Arrow into container</td></tr>
+    <tr><td>Offer</td><td>Offer</td><td>Wrapped package</td></tr>
+    <tr><td>Conversion</td><td>Conversion</td><td>Target bullseye</td></tr>
+    <tr><td>Campaign Event</td><td>Campaign Event</td><td>Clock face</td></tr>
+    <tr><td>Post</td><td>Post</td><td>Document with text lines</td></tr>
+    <tr><td>Interaction</td><td>Interaction</td><td>Cursor on content</td></tr>
+    <tr><td>LI Activity</td><td>Signal (shared)</td><td>Reuses Signal icon. Contextual labeling differentiates.</td></tr>
+    <tr><td>Signal</td><td>Signal</td><td>Radiating arcs</td></tr>
+    <tr><td>Connection</td><td>Connection</td><td>Two-node link</td></tr>
+    <tr><td>Relationship</td><td>Relationship</td><td>Hub + spokes cluster</td></tr>
+    <tr><td>Content Program</td><td>Content Program</td><td>Stacked rectangles</td></tr>
+    <tr><td>Content Project</td><td>Content Project</td><td>Document with text lines</td></tr>
+    <tr><td>Industry Event</td><td>Industry Event</td><td>Calendar with date marker</td></tr>
+    <tr><td>File</td><td>File</td><td>Folded-corner document</td></tr>
+  </tbody>
+</table>
+
+<h2>Usage Rules</h2>
+<p><strong>Color.</strong> Icons inherit from <code>currentColor</code>. Default to Lagoon on light surfaces, white on dark. Poppy is allowed when the icon is acting as a methodology accent (rare). Never Daffodil, never Lake as the primary icon color.</p>
+<p><strong>Size.</strong> Web inline 24px, web section markers 48px. Decks: 32-40px next to eyebrows, 72-96px in 3-up grids, 200px+ as hero. Slides require SVG (never PNG) for projection clarity.</p>
+<p><strong>Don't.</strong> No rotation, no skew, no recoloring outside the palette, no rounded-corner variants. If an icon needs adaptation, redraw it inside the system, don't filter the SVG.</p>
+<p><strong>Naming.</strong> Files use kebab-case matching the concept, e.g. <code>content-program.svg</code>, <code>arrow-right.svg</code>. The library lives at <code>icons/v1/</code> in production.</p>
+
+<h2>Archetype Map</h2>
+<p>Future additions extend from these archetype shapes. When a new concept appears, identify which family it belongs to, then start from that shape and modify minimally.</p>
+<table>
+  <thead><tr><th>Archetype</th><th>Base icon</th><th>Variants in v1</th></tr></thead>
+  <tbody>
+    <tr><td>Person</td><td>Contact</td><td>Operator (focal dot inside head), Team Member (marker dot above head)</td></tr>
+    <tr><td>Company / building</td><td>Account</td><td>Client (logo dot inside building)</td></tr>
+    <tr><td>Process / flag</td><td>Campaign</td><td>Motion (two flags on one pole)</td></tr>
+    <tr><td>Link / paired nodes</td><td>Connection</td><td>(Relationship is in the cluster family, not the link family)</td></tr>
+    <tr><td>Document / container</td><td>Content Project</td><td>Post (text lines), File (folded corner), Content Program (stacked)</td></tr>
+    <tr><td>Circle scope</td><td>Discovery</td><td>Monitor (continuous), Campaign Event (clock), Conversion (target)</td></tr>
+    <tr><td>Symbol / mark</td><td>Engine, Signal, Trust, Growth, Conversation, Pipeline, Segment, Enrollment, Offer, Industry Event</td><td>Standalone concepts that don't belong to a shape family</td></tr>
+  </tbody>
+</table>
+
+<div class="footer">
+  v1.0 · 30 icons · 2026-05-13 · Source files: <code>icons/v1-batch-1/*.svg</code> · Library lives at <code>icons/v1/</code> in production. Update this skill (and the Splendid Visual Brand skill section 6) when the library extends.
+</div>
+
+</body>
+</html>

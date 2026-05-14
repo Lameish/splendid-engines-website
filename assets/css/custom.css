@@ -361,13 +361,12 @@ hr.section-divider {
 }
 .bg-lagoon .testimonial-attr-role { color: rgba(255,255,255,0.7); }
 
-/* ---------- Footer (light) ---------- */
+/* ---------- Footer (dark) ---------- */
 .site-footer {
-  background-color: var(--snow);
-  color: var(--lagoon);
-  border-top: 1px solid var(--line);
+  background-color: var(--lagoon);
+  color: #fff;
 }
-.site-footer a { color: var(--lagoon); text-decoration: none; }
+.site-footer a { color: #fff; text-decoration: none; }
 .site-footer a:hover { color: var(--poppy); }
 .site-footer .footer-logo { max-height: 56px; width: auto; }
 .site-footer .footer-tagline-script {
@@ -379,7 +378,7 @@ hr.section-divider {
 .site-footer .footer-meta {
   font-family: 'Mulish', sans-serif;
   font-size: 0.875rem;
-  color: var(--muted);
+  color: rgba(255, 255, 255, 0.7);
   text-transform: none;
   letter-spacing: 0;
 }
